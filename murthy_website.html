@@ -1,0 +1,2164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murthys Millet Magic - Premium Organic Millets</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Premium organic millets delivered fresh. AI-powered shopping experience with same-day delivery.">
+    <style>
+        :root {
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --green-50: #f0fdf4;
+            --green-100: #dcfce7;
+            --green-200: #bbf7d0;
+            --green-300: #86efac;
+            --green-400: #4ade80;
+            --green-500: #22c55e;
+            --green-600: #16a34a;
+            --green-700: #15803d;
+            --green-800: #166534;
+            --green-900: #14532d;
+            --shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
+            color: var(--gray-900);
+            background: var(--white);
+            font-feature-settings: 'cv11', 'ss01';
+            font-variant-numeric: oldstyle-nums;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Performance optimizations */
+        .will-change-transform { will-change: transform; }
+        .will-change-opacity { will-change: opacity; }
+        .gpu-layer { transform: translateZ(0); }
+
+        /* Sale Banner */
+        .sale-banner {
+            background: linear-gradient(90deg, var(--green-600), var(--green-500));
+            color: var(--white);
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            font-weight: 500;
+            overflow: hidden;
+            position: relative;
+            z-index: 50;
+        }
+
+        .marquee {
+            display: flex;
+            animation: marquee 25s linear infinite;
+            will-change: transform;
+        }
+
+        .marquee-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            min-width: 100%;
+            white-space: nowrap;
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(100%, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        .sale-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            position: fixed;
+            width: 100%;
+            top: 2rem;
+            z-index: 40;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover .logo-image {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .footer-logo {
+            width: 36px;
+            height: 36px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-brand:hover .footer-logo {
+            transform: rotate(-5deg) scale(1.05);
+        }
+
+        .logo-text {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: var(--gray-700);
+            letter-spacing: -0.015em;
+        }
+
+        @media (max-width: 768px) {
+            .logo-image {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .logo-text {
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-600);
+            font-weight: 500;
+            font-size: 0.875rem;
+            transition: color 0.15s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--gray-900);
+        }
+
+        .language-selector {
+            position: relative;
+        }
+
+        .language-btn {
+            background: var(--gray-100);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.15s ease;
+        }
+
+        .language-btn:hover {
+            background: var(--gray-200);
+        }
+
+        .language-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow-lg);
+            min-width: 120px;
+            padding: 0.5rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-0.5rem);
+            transition: all 0.15s ease;
+            z-index: 50;
+        }
+
+        .language-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .language-option {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: var(--gray-700);
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: background-color 0.15s ease;
+        }
+
+        .language-option:hover {
+            background: var(--gray-50);
+        }
+
+        .language-option.active {
+            background: var(--green-50);
+            color: var(--green-700);
+            font-weight: 500;
+        }
+
+        .header-cta {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 1.5rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            font-size: 0.875rem;
+        }
+
+        .header-cta:hover {
+            background: var(--gray-800);
+            transform: translateY(-1px);
+        }
+
+        /* Hero */
+        .hero {
+            background: var(--white);
+            padding: 10rem 0 6rem;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--green-50);
+            color: var(--green-700);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            line-height: 1.1;
+            letter-spacing: -0.025em;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--gray-600);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+            max-width: 42rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.75rem;
+            border-radius: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.15s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 0.9375rem;
+        }
+
+        .btn-primary {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--gray-800);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--gray-900);
+            border: 1px solid var(--gray-300);
+        }
+
+        .btn-secondary:hover {
+            background: var(--gray-50);
+            border-color: var(--gray-400);
+        }
+
+        /* AI Section */
+        .ai-section {
+            padding: 6rem 0;
+            background: var(--green-50);
+        }
+
+        .ai-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .ai-text h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+            letter-spacing: -0.025em;
+        }
+
+        .ai-text p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .ai-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .ai-feature {
+            background: var(--white);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border: 1px solid var(--green-200);
+        }
+
+        .ai-feature h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .ai-feature p {
+            font-size: 0.875rem;
+            color: var(--gray-600);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .ai-demo {
+            background: var(--white);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--green-200);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .chat-interface {
+            border: 1px solid var(--gray-200);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: var(--gray-50);
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+            font-weight: 600;
+            font-size: 0.875rem;
+            color: var(--gray-900);
+        }
+
+        .chat-messages {
+            padding: 1rem;
+            height: 18rem;
+            overflow-y: auto;
+        }
+
+        .message {
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-bubble {
+            background: var(--gray-100);
+            padding: 0.75rem 1rem;
+            border-radius: 1rem;
+            max-width: 85%;
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+
+        .message.user .message-bubble {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        .message-avatar {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            background: var(--green-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            flex-shrink: 0;
+        }
+
+        .message.user .message-avatar {
+            background: var(--gray-900);
+            color: var(--white);
+        }
+
+        /* Products */
+        .products {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+            letter-spacing: -0.025em;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            max-width: 42rem;
+            margin: 0 auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--green-300);
+        }
+
+        .product-image {
+            height: 12rem;
+            background: linear-gradient(135deg, var(--green-100), var(--green-50));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--green-600);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--gray-900);
+        }
+
+        .product-card p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--green-600);
+        }
+
+        .product-weight {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            background: var(--gray-100);
+            padding: 0.25rem 0.75rem;
+            border-radius: 0.75rem;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            background: var(--gray-900);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-size: 0.875rem;
+        }
+
+        .add-to-cart:hover {
+            background: var(--gray-800);
+        }
+
+        /* Delivery */
+        .delivery {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .delivery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .delivery-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 1rem;
+            border: 1px solid var(--gray-200);
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+
+        .delivery-card:hover {
+            transform: translateY(-0.125rem);
+            box-shadow: var(--shadow-md);
+        }
+
+        .delivery-icon {
+            width: 4rem;
+            height: 4rem;
+            background: var(--green-100);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 1.5rem;
+            color: var(--green-600);
+        }
+
+        .delivery-card h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--gray-900);
+        }
+
+        .delivery-card p {
+            color: var(--gray-600);
+            font-size: 0.875rem;
+            line-height: 1.5;
+        }
+
+        /* Features */
+        .features {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .feature-icon {
+            width: 5rem;
+            height: 5rem;
+            background: var(--green-100);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--green-600);
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* CTA */
+        .cta-section {
+            padding: 5rem 0;
+            background: var(--green-50);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--gray-900);
+            letter-spacing: -0.025em;
+        }
+
+        .cta-section p {
+            font-size: 1.125rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--white);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo {
+            width: 36px;
+            height: 36px;
+        }
+
+        .footer-brand-text {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        .footer-section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: var(--gray-400);
+            text-decoration: none;
+            line-height: 1.75;
+            font-size: 0.875rem;
+            transition: color 0.15s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--gray-800);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: var(--green-500);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.25rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.2s ease;
+            z-index: 40;
+            border: none;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.05);
+            background: var(--green-600);
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .modal-content {
+            background: var(--white);
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 1rem;
+            width: 100%;
+            max-width: 28rem;
+            position: relative;
+            box-shadow: var(--shadow-xl);
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+
+        .close {
+            color: var(--gray-400);
+            float: right;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            right: 1.25rem;
+            top: 1.25rem;
+            transition: color 0.15s ease;
+        }
+
+        .close:hover {
+            color: var(--gray-600);
+        }
+
+        .modal-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--gray-900);
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--gray-300);
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            transition: border-color 0.15s ease;
+            font-family: inherit;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--green-500);
+            box-shadow: 0 0 0 3px var(--green-100);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links, .language-selector {
+                display: none;
+            }
+            
+            .hero {
+                padding: 8rem 0 4rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.125rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .ai-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .ai-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .modal {
+                padding: 0.5rem;
+            }
+
+            .modal-content {
+                margin: 1rem auto;
+                padding: 1.5rem;
+                max-height: calc(100vh - 2rem);
+                border-radius: 0.75rem;
+            }
+
+            .modal-content h2 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .form-group {
+                margin-bottom: 1rem;
+            }
+
+            .close {
+                font-size: 1.25rem;
+                right: 1rem;
+                top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .modal {
+                padding: 0.25rem;
+            }
+
+            .modal-content {
+                margin: 0.5rem auto;
+                padding: 1rem;
+                max-height: calc(100vh - 1rem);
+                border-radius: 0.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(1rem);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading states */
+        .loading {
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        /* Improved focus states */
+        .btn:focus-visible,
+        .header-cta:focus-visible,
+        .language-btn:focus-visible {
+            outline: 2px solid var(--green-500);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sale Banner -->
+    <div class="sale-banner">
+        <div class="marquee">
+            <div class="marquee-content">
+                <div class="sale-item" data-translate="sale1">🎉 <span data-key="sale1">Grand Opening: 30% OFF on all premium organic millets</span></div>
+                <div class="sale-item" data-translate="sale2">🚚 <span data-key="sale2">Free same-day delivery on orders above ₹499</span></div>
+                <div class="sale-item" data-translate="sale3">⭐ <span data-key="sale3">100% certified organic & pesticide-free guarantee</span></div>
+                <div class="sale-item" data-translate="sale4">💚 <span data-key="sale4">Farm-to-table freshness in every grain</span></div>
+                <div class="sale-item" data-translate="sale5">🏆 <span data-key="sale5">Premium quality - handpicked & stone-cleaned</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <svg class="logo-image" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer circle -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#8B4513" stroke-width="3"/>
+                    
+                    <!-- Inner sun rays -->
+                    <g stroke="#D2B48C" stroke-width="2" opacity="0.8">
+                        <line x1="100" y1="20" x2="100" y2="35" />
+                        <line x1="135" y1="25" x2="130" y2="38" />
+                        <line x1="165" y1="45" x2="155" y2="55" />
+                        <line x1="180" y1="75" x2="167" y2="82" />
+                        <line x1="185" y1="110" x2="172" y2="110" />
+                        <line x1="180" y1="145" x2="167" y2="138" />
+                        <line x1="165" y1="175" x2="155" y2="165" />
+                        <line x1="135" y1="195" x2="130" y2="182" />
+                        <line x1="100" y1="200" x2="100" y2="185" />
+                        <line x1="65" y1="195" x2="70" y2="182" />
+                        <line x1="35" y1="175" x2="45" y2="165" />
+                        <line x1="20" y1="145" x2="33" y2="138" />
+                        <line x1="15" y1="110" x2="28" y2="110" />
+                        <line x1="20" y1="75" x2="33" y2="82" />
+                        <line x1="35" y1="45" x2="45" y2="55" />
+                        <line x1="65" y1="25" x2="70" y2="38" />
+                    </g>
+                    
+                    <!-- Central sun circle -->
+                    <circle cx="100" cy="100" r="40" fill="#DEB887" opacity="0.9"/>
+                    
+                    <!-- Central wheat stalk -->
+                    <g fill="#8B4513">
+                        <!-- Main stem -->
+                        <rect x="98" y="70" width="4" height="60" rx="2"/>
+                        
+                        <!-- Wheat grains -->
+                        <ellipse cx="95" cy="75" rx="3" ry="6" transform="rotate(-15 95 75)"/>
+                        <ellipse cx="105" cy="80" rx="3" ry="6" transform="rotate(15 105 80)"/>
+                        <ellipse cx="95" cy="85" rx="3" ry="6" transform="rotate(-15 95 85)"/>
+                        <ellipse cx="105" cy="90" rx="3" ry="6" transform="rotate(15 105 90)"/>
+                        <ellipse cx="95" cy="95" rx="3" ry="6" transform="rotate(-15 95 95)"/>
+                        <ellipse cx="105" cy="100" rx="3" ry="6" transform="rotate(15 105 100)"/>
+                        <ellipse cx="95" cy="105" rx="3" ry="6" transform="rotate(-15 95 105)"/>
+                        <ellipse cx="105" cy="110" rx="3" ry="6" transform="rotate(15 105 110)"/>
+                    </g>
+                    
+                    <!-- Side wheat stalks -->
+                    <g fill="#8B7355" opacity="0.8">
+                        <!-- Left stalk -->
+                        <rect x="78" y="100" width="3" height="25" rx="1" transform="rotate(-20 78 100)"/>
+                        <ellipse cx="75" cy="105" rx="2" ry="4" transform="rotate(-30 75 105)"/>
+                        <ellipse cx="73" cy="110" rx="2" ry="4" transform="rotate(-30 73 110)"/>
+                        <ellipse cx="71" cy="115" rx="2" ry="4" transform="rotate(-30 71 115)"/>
+                        
+                        <!-- Right stalk -->
+                        <rect x="119" y="100" width="3" height="25" rx="1" transform="rotate(20 119 100)"/>
+                        <ellipse cx="125" cy="105" rx="2" ry="4" transform="rotate(30 125 105)"/>
+                        <ellipse cx="127" cy="110" rx="2" ry="4" transform="rotate(30 127 110)"/>
+                        <ellipse cx="129" cy="115" rx="2" ry="4" transform="rotate(30 129 115)"/>
+                    </g>
+                    
+                    <!-- Decorative leaves -->
+                    <g fill="#9ACD32" opacity="0.6">
+                        <path d="M 70 130 Q 60 125 70 120 Q 80 125 70 130"/>
+                        <path d="M 130 130 Q 140 125 130 120 Q 120 125 130 130"/>
+                        <path d="M 85 140 Q 75 135 85 130 Q 95 135 85 140"/>
+                        <path d="M 115 140 Q 125 135 115 130 Q 105 135 115 140"/>
+                    </g>
+                </svg>
+                <span class="logo-text" data-key="logo">Murthys Millet Magic</span>
+            </a>
+            
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#home" data-key="nav-home">Home</a></li>
+                    <li><a href="#products" data-key="nav-products">Products</a></li>
+                    <li><a href="#ai-assistant" data-key="nav-ai">AI Assistant</a></li>
+                    <li><a href="#delivery" data-key="nav-delivery">Delivery</a></li>
+                    <li><a href="#contact" data-key="nav-contact">Contact</a></li>
+                </ul>
+                
+                <div class="language-selector">
+                    <button class="language-btn" onclick="toggleLanguageDropdown()">
+                        <span id="current-language">EN</span>
+                        <span>▼</span>
+                    </button>
+                    <div class="language-dropdown" id="language-dropdown">
+                        <a href="#" class="language-option active" onclick="changeLanguage('en')">English</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('hi')">हिंदी</a>
+                        <a href="#" class="language-option" onclick="changeLanguage('te')">తెలుగు</a>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="header-cta" onclick="openOrderModal()" data-key="order-now">Order Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="fade-in">
+                <div class="hero-badge">
+                    ✨ <span data-key="hero-badge">Premium Organic Collection</span>
+                </div>
+                <h1 data-key="hero-title">The purest millets, delivered fresh to your doorstep</h1>
+                <p class="hero-subtitle" data-key="hero-subtitle">Experience the finest selection of organic millets, carefully sourced from certified farms and processed with utmost care to preserve their natural goodness and nutritional value.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary" data-key="shop-collection">
+                        🛍️ Shop Collection
+                    </a>
+                    <a href="#ai-assistant" class="btn btn-secondary" data-key="try-ai">
+                        🤖 Try AI Assistant
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant Section -->
+    <section class="ai-section" id="ai-assistant">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text fade-in">
+                    <h2 data-key="ai-title">Meet Your Personal Millet Expert</h2>
+                    <p data-key="ai-desc1">Our advanced conversational AI assistant uses Retrieval-Augmented Generation (RAG) technology to provide you with instant, accurate information about our products, nutritional benefits, cooking methods, and more.</p>
+                    <p data-key="ai-desc2">Get personalized recommendations based on your dietary needs, ask about specific millet varieties, learn cooking techniques, or get nutritional advice - all through natural conversation with our intelligent assistant.</p>
+                    
+                    <div class="ai-features">
+                        <div class="ai-feature">
+                            <h4 data-key="ai-feature1-title">Instant Product Info</h4>
+                            <p data-key="ai-feature1-desc">Get detailed information about any millet variety, its benefits, and uses</p>
+                        </div>
+                        <div class="ai-feature">
+                            <h4 data-key="ai-feature2-title">Nutritional Guidance</h4>
+                            <p data-key="ai-feature2-desc">Receive personalized dietary advice and meal planning suggestions</p>
+                        </div>
+                        <div class="ai-feature">
+                            <h4 data-key="ai-feature3-title">Cooking Assistance</h4>
+                            <p data-key="ai-feature3-desc">Learn traditional and modern recipes with step-by-step guidance</p>
+                        </div>
+                        <div class="ai-feature">
+                            <h4 data-key="ai-feature4-title">Smart Recommendations</h4>
+                            <p data-key="ai-feature4-desc">Get product suggestions based on your preferences and health goals</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ai-demo fade-in">
+                    <div class="chat-interface">
+                        <div class="chat-header">
+                            🤖 <span data-key="chat-header">Millet Magic AI Assistant</span>
+                        </div>
+                        <div class="chat-messages">
+                            <div class="message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble" data-key="chat-msg1">
+                                    Hello! I'm your personal millet expert. I can help you choose the right millets for your needs, provide nutritional information, share recipes, and answer any questions about our products. What would you like to know?
+                                </div>
+                            </div>
+                            <div class="message user">
+                                <div class="message-avatar">👤</div>
+                                <div class="message-bubble" data-key="chat-msg2">
+                                    Which millet is best for weight management?
+                                </div>
+                            </div>
+                            <div class="message">
+                                <div class="message-avatar">🤖</div>
+                                <div class="message-bubble" data-key="chat-msg3">
+                                    Great question! For weight management, I'd recommend Foxtail Millet and Finger Millet (Ragi). Foxtail millet is low in calories and high in fiber, helping you feel full longer. Ragi is rich in calcium and amino acids, supporting metabolism.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-key="products-title">Premium Millet Collection</h2>
+                <p data-key="products-subtitle">Handpicked varieties sourced directly from certified organic farms, processed with care to preserve maximum nutrition and authentic taste.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card fade-in">
+                    <div class="product-image">🌾</div>
+                    <div class="product-info">
+                        <h3 data-key="product1-name">Premium Pearl Millet (Bajra)</h3>
+                        <p data-key="product1-desc">Rich in protein, iron, and magnesium. Perfect for traditional rotis, porridge, and modern grain bowls. Known for its energy-boosting properties and gluten-free nature.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹145/kg</span>
+                            <span class="product-weight" data-key="weight-1kg">1kg pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Premium Pearl Millet')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image">🌿</div>
+                    <div class="product-info">
+                        <h3 data-key="product2-name">Organic Finger Millet (Ragi)</h3>
+                        <p data-key="product2-desc">Exceptional source of calcium and amino acids. Ideal for growing children and bone health. Naturally rich in antioxidants and perfect for various preparations.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹165/kg</span>
+                            <span class="product-weight" data-key="weight-1kg">1kg pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Organic Finger Millet')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image">🌱</div>
+                    <div class="product-info">
+                        <h3 data-key="product3-name">Premium Foxtail Millet</h3>
+                        <p data-key="product3-desc">Low glycemic index grain excellent for diabetes management. High in fiber and protein, supports weight management and provides sustained energy throughout the day.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹185/kg</span>
+                            <span class="product-weight" data-key="weight-1kg">1kg pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Premium Foxtail Millet')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image">✨</div>
+                    <div class="product-info">
+                        <h3 data-key="product4-name">Multi-Millet Flour Blend</h3>
+                        <p data-key="product4-desc">Carefully balanced blend of 5 premium millets. Perfect for rotis, bread, and baking. Combines the nutritional benefits of multiple grains in one convenient package.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹195/kg</span>
+                            <span class="product-weight" data-key="weight-1kg">1kg pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Multi-Millet Flour Blend')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image">🥣</div>
+                    <div class="product-info">
+                        <h3 data-key="product5-name">Fresh Millet Idli/Dosa Batter</h3>
+                        <p data-key="product5-desc">Freshly fermented batter made from premium millet blend. Ready-to-cook convenience with traditional taste. Delivered fresh daily with natural fermentation.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹95/500g</span>
+                            <span class="product-weight" data-key="weight-500g">500g pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Fresh Millet Batter')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                
+                <div class="product-card fade-in">
+                    <div class="product-image">🍪</div>
+                    <div class="product-info">
+                        <h3 data-key="product6-name">Artisan Millet Cookies</h3>
+                        <p data-key="product6-desc">Handcrafted cookies made with premium millet flour, jaggery, and organic ingredients. Perfect healthy snack for kids and adults, packed with natural goodness.</p>
+                        <div class="product-details">
+                            <span class="product-price">₹225/pack</span>
+                            <span class="product-weight" data-key="weight-250g">250g pack</span>
+                        </div>
+                        <button class="add-to-cart" onclick="openOrderModal('Artisan Millet Cookies')" data-key="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section class="delivery" id="delivery">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-key="delivery-title">Delivery Options</h2>
+                <p data-key="delivery-subtitle">Choose from our flexible delivery options designed to get fresh millets to your doorstep exactly when you need them.</p>
+            </div>
+            <div class="delivery-grid">
+                <div class="delivery-card fade-in">
+                    <div class="delivery-icon">🚚</div>
+                    <h3 data-key="delivery1-title">Same-Day Express</h3>
+                    <p data-key="delivery1-desc">Order before 2 PM and receive your fresh millets the same day. Available in Visakhapatnam and surrounding areas. Perfect for urgent requirements.</p>
+                </div>
+                
+                <div class="delivery-card fade-in">
+                    <div class="delivery-icon">📦</div>
+                    <h3 data-key="delivery2-title">Standard Delivery</h3>
+                    <p data-key="delivery2-desc">Free delivery on orders above ₹499. Get your millets delivered within 24-48 hours across Andhra Pradesh with secure packaging and quality guarantee.</p>
+                </div>
+                
+                <div class="delivery-card fade-in">
+                    <div class="delivery-icon">🔄</div>
+                    <h3 data-key="delivery3-title">Subscription Service</h3>
+                    <p data-key="delivery3-desc">Never run out of millets again. Set up weekly, bi-weekly, or monthly deliveries with 15% savings and priority delivery slots. Cancel anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 data-key="features-title">Why Choose Murthys Millet Magic</h2>
+                <p data-key="features-subtitle">We're committed to bringing you the highest quality organic millets with uncompromising standards and exceptional service.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🌾</div>
+                    <h3 data-key="feature1-title">Certified Organic</h3>
+                    <p data-key="feature1-desc">All our millets are sourced from certified organic farms with rigorous testing for purity. No chemicals, pesticides, or artificial additives - just pure, natural goodness as nature intended.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🏆</div>
+                    <h3 data-key="feature2-title">Premium Quality</h3>
+                    <p data-key="feature2-desc">Handpicked grains undergo traditional stone cleaning and modern quality checks. Each batch is carefully processed to retain maximum nutrition, taste, and freshness.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">🤖</div>
+                    <h3 data-key="feature3-title">AI-Powered Support</h3>
+                    <p data-key="feature3-desc">Get instant answers to your questions with our advanced AI assistant. From nutritional advice to cooking tips, get personalized recommendations 24/7.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container fade-in">
+            <h2 data-key="cta-title">Start Your Healthy Journey Today</h2>
+            <p data-key="cta-subtitle">Join thousands of families who have made the switch to premium organic millets for better health and nutrition.</p>
+            <a href="#" class="btn btn-primary" onclick="openOrderModal()" data-key="order-first-pack">🛒 Order Your First Pack</a>
+        </div>
+    </section>
+
+    <!-- Chat Button -->
+    <button class="chat-button" onclick="openChat()">💬</button>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <svg class="footer-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer circle -->
+                            <circle cx="100" cy="100" r="95" fill="none" stroke="#D2B48C" stroke-width="3"/>
+                            
+                            <!-- Inner sun rays -->
+                            <g stroke="#F5DEB3" stroke-width="2" opacity="0.8">
+                                <line x1="100" y1="20" x2="100" y2="35" />
+                                <line x1="135" y1="25" x2="130" y2="38" />
+                                <line x1="165" y1="45" x2="155" y2="55" />
+                                <line x1="180" y1="75" x2="167" y2="82" />
+                                <line x1="185" y1="110" x2="172" y2="110" />
+                                <line x1="180" y1="145" x2="167" y2="138" />
+                                <line x1="165" y1="175" x2="155" y2="165" />
+                                <line x1="135" y1="195" x2="130" y2="182" />
+                                <line x1="100" y1="200" x2="100" y2="185" />
+                                <line x1="65" y1="195" x2="70" y2="182" />
+                                <line x1="35" y1="175" x2="45" y2="165" />
+                                <line x1="20" y1="145" x2="33" y2="138" />
+                                <line x1="15" y1="110" x2="28" y2="110" />
+                                <line x1="20" y1="75" x2="33" y2="82" />
+                                <line x1="35" y1="45" x2="45" y2="55" />
+                                <line x1="65" y1="25" x2="70" y2="38" />
+                            </g>
+                            
+                            <!-- Central sun circle -->
+                            <circle cx="100" cy="100" r="40" fill="#DEB887" opacity="0.9"/>
+                            
+                            <!-- Central wheat stalk -->
+                            <g fill="#8B4513">
+                                <!-- Main stem -->
+                                <rect x="98" y="70" width="4" height="60" rx="2"/>
+                                
+                                <!-- Wheat grains -->
+                                <ellipse cx="95" cy="75" rx="3" ry="6" transform="rotate(-15 95 75)"/>
+                                <ellipse cx="105" cy="80" rx="3" ry="6" transform="rotate(15 105 80)"/>
+                                <ellipse cx="95" cy="85" rx="3" ry="6" transform="rotate(-15 95 85)"/>
+                                <ellipse cx="105" cy="90" rx="3" ry="6" transform="rotate(15 105 90)"/>
+                                <ellipse cx="95" cy="95" rx="3" ry="6" transform="rotate(-15 95 95)"/>
+                                <ellipse cx="105" cy="100" rx="3" ry="6" transform="rotate(15 105 100)"/>
+                                <ellipse cx="95" cy="105" rx="3" ry="6" transform="rotate(-15 95 105)"/>
+                                <ellipse cx="105" cy="110" rx="3" ry="6" transform="rotate(15 105 110)"/>
+                            </g>
+                            
+                            <!-- Side wheat stalks -->
+                            <g fill="#A0522D" opacity="0.8">
+                                <!-- Left stalk -->
+                                <rect x="78" y="100" width="3" height="25" rx="1" transform="rotate(-20 78 100)"/>
+                                <ellipse cx="75" cy="105" rx="2" ry="4" transform="rotate(-30 75 105)"/>
+                                <ellipse cx="73" cy="110" rx="2" ry="4" transform="rotate(-30 73 110)"/>
+                                <ellipse cx="71" cy="115" rx="2" ry="4" transform="rotate(-30 71 115)"/>
+                                
+                                <!-- Right stalk -->
+                                <rect x="119" y="100" width="3" height="25" rx="1" transform="rotate(20 119 100)"/>
+                                <ellipse cx="125" cy="105" rx="2" ry="4" transform="rotate(30 125 105)"/>
+                                <ellipse cx="127" cy="110" rx="2" ry="4" transform="rotate(30 127 110)"/>
+                                <ellipse cx="129" cy="115" rx="2" ry="4" transform="rotate(30 129 115)"/>
+                            </g>
+                            
+                            <!-- Decorative leaves -->
+                            <g fill="#9ACD32" opacity="0.6">
+                                <path d="M 70 130 Q 60 125 70 120 Q 80 125 70 130"/>
+                                <path d="M 130 130 Q 140 125 130 120 Q 120 125 130 130"/>
+                                <path d="M 85 140 Q 75 135 85 130 Q 95 135 85 140"/>
+                                <path d="M 115 140 Q 125 135 115 130 Q 105 135 115 140"/>
+                            </g>
+                        </svg>
+                        <span class="footer-brand-text" data-key="footer-title">Murthys Millet Magic</span>
+                    </div>
+                    <p data-key="footer-desc">Premium organic millets delivered fresh to your doorstep. Committed to quality, nutrition, and sustainable farming practices for a healthier future.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-key="footer-links">Quick Links</h3>
+                    <p><a href="#home" data-key="nav-home">Home</a></p>
+                    <p><a href="#products" data-key="nav-products">Products</a></p>
+                    <p><a href="#ai-assistant" data-key="nav-ai">AI Assistant</a></p>
+                    <p><a href="#delivery" data-key="nav-delivery">Delivery</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-key="footer-contact">Contact Us</h3>
+                    <p>📞 +91 9876-543-210</p>
+                    <p>📧 hello@murthysmillet.com</p>
+                    <p>📍 Visakhapatnam, Andhra Pradesh</p>
+                    <p data-key="footer-hours">🕒 Mon-Sat: 8 AM - 8 PM</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-key="footer-delivery-areas">Delivery Areas</h3>
+                    <p data-key="footer-area1">Visakhapatnam City & Suburbs</p>
+                    <p data-key="footer-area2">Same-day delivery available</p>
+                    <p data-key="footer-area3">Free delivery on orders ₹499+</p>
+                    <p data-key="footer-area4">Express delivery in 2-4 hours</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-key="footer-copyright">&copy; 2025 Murthys Millet Magic. All rights reserved. | Organic Certified | Farm to Table Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2 data-key="modal-title">Place Your Order</h2>
+            <form class="order-form" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="productName" data-key="modal-product">Select Product:</label>
+                    <select id="productName" name="productName" required>
+                        <option value="" data-key="modal-choose">Choose your millet variety</option>
+                        <option value="Premium Pearl Millet">Premium Pearl Millet (Bajra) - ₹145/kg</option>
+                        <option value="Organic Finger Millet">Organic Finger Millet (Ragi) - ₹165/kg</option>
+                        <option value="Premium Foxtail Millet">Premium Foxtail Millet - ₹185/kg</option>
+                        <option value="Multi-Millet Flour Blend">Multi-Millet Flour Blend - ₹195/kg</option>
+                        <option value="Fresh Millet Batter">Fresh Millet Idli/Dosa Batter - ₹95/500g</option>
+                        <option value="Artisan Millet Cookies">Artisan Millet Cookies - ₹225/pack</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="quantity" data-key="modal-quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerName" data-key="modal-name">Full Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" data-key="modal-phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" data-key="modal-address">Delivery Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="deliveryTime" data-key="modal-delivery">Preferred Delivery:</label>
+                    <select id="deliveryTime" name="deliveryTime" required>
+                        <option value="" data-key="modal-delivery-select">Select delivery option</option>
+                        <option value="same-day" data-key="modal-same-day">Same-day Express (₹50 extra)</option>
+                        <option value="next-day" data-key="modal-next-day">Next-day Standard (Free above ₹499)</option>
+                        <option value="scheduled" data-key="modal-scheduled">Schedule for later</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="specialInstructions" data-key="modal-instructions">Special Instructions (Optional):</label>
+                    <textarea id="specialInstructions" name="specialInstructions" rows="2" data-key="modal-instructions-placeholder" placeholder="Any specific delivery instructions or preferences..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;" data-key="modal-confirm">Confirm Order</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Translations
+        const translations = {
+            en: {
+                "logo": "Murthys Millet Magic",
+                "sale1": "Grand Opening: 30% OFF on all premium organic millets",
+                "sale2": "Free same-day delivery on orders above ₹499",
+                "sale3": "100% certified organic & pesticide-free guarantee",
+                "sale4": "Farm-to-table freshness in every grain",
+                "sale5": "Premium quality - handpicked & stone-cleaned",
+                "nav-home": "Home",
+                "nav-products": "Products",
+                "nav-ai": "AI Assistant",
+                "nav-delivery": "Delivery",
+                "nav-contact": "Contact",
+                "order-now": "Order Now",
+                "hero-badge": "Premium Organic Collection",
+                "hero-title": "The purest millets, delivered fresh to your doorstep",
+                "hero-subtitle": "Experience the finest selection of organic millets, carefully sourced from certified farms and processed with utmost care to preserve their natural goodness and nutritional value.",
+                "shop-collection": "🛍️ Shop Collection",
+                "try-ai": "🤖 Try AI Assistant",
+                "ai-title": "Meet Your Personal Millet Expert",
+                "ai-desc1": "Our advanced conversational AI assistant uses Retrieval-Augmented Generation (RAG) technology to provide you with instant, accurate information about our products, nutritional benefits, cooking methods, and more.",
+                "ai-desc2": "Get personalized recommendations based on your dietary needs, ask about specific millet varieties, learn cooking techniques, or get nutritional advice - all through natural conversation with our intelligent assistant.",
+                "ai-feature1-title": "Instant Product Info",
+                "ai-feature1-desc": "Get detailed information about any millet variety, its benefits, and uses",
+                "ai-feature2-title": "Nutritional Guidance",
+                "ai-feature2-desc": "Receive personalized dietary advice and meal planning suggestions",
+                "ai-feature3-title": "Cooking Assistance",
+                "ai-feature3-desc": "Learn traditional and modern recipes with step-by-step guidance",
+                "ai-feature4-title": "Smart Recommendations",
+                "ai-feature4-desc": "Get product suggestions based on your preferences and health goals",
+                "chat-header": "Millet Magic AI Assistant",
+                "chat-msg1": "Hello! I'm your personal millet expert. I can help you choose the right millets for your needs, provide nutritional information, share recipes, and answer any questions about our products. What would you like to know?",
+                "chat-msg2": "Which millet is best for weight management?",
+                "chat-msg3": "Great question! For weight management, I'd recommend Foxtail Millet and Finger Millet (Ragi). Foxtail millet is low in calories and high in fiber, helping you feel full longer. Ragi is rich in calcium and amino acids, supporting metabolism.",
+                "products-title": "Premium Millet Collection",
+                "products-subtitle": "Handpicked varieties sourced directly from certified organic farms, processed with care to preserve maximum nutrition and authentic taste.",
+                "product1-name": "Premium Pearl Millet (Bajra)",
+                "product1-desc": "Rich in protein, iron, and magnesium. Perfect for traditional rotis, porridge, and modern grain bowls. Known for its energy-boosting properties and gluten-free nature.",
+                "product2-name": "Organic Finger Millet (Ragi)",
+                "product2-desc": "Exceptional source of calcium and amino acids. Ideal for growing children and bone health. Naturally rich in antioxidants and perfect for various preparations.",
+                "product3-name": "Premium Foxtail Millet",
+                "product3-desc": "Low glycemic index grain excellent for diabetes management. High in fiber and protein, supports weight management and provides sustained energy throughout the day.",
+                "product4-name": "Multi-Millet Flour Blend",
+                "product4-desc": "Carefully balanced blend of 5 premium millets. Perfect for rotis, bread, and baking. Combines the nutritional benefits of multiple grains in one convenient package.",
+                "product5-name": "Fresh Millet Idli/Dosa Batter",
+                "product5-desc": "Freshly fermented batter made from premium millet blend. Ready-to-cook convenience with traditional taste. Delivered fresh daily with natural fermentation.",
+                "product6-name": "Artisan Millet Cookies",
+                "product6-desc": "Handcrafted cookies made with premium millet flour, jaggery, and organic ingredients. Perfect healthy snack for kids and adults, packed with natural goodness.",
+                "weight-1kg": "1kg pack",
+                "weight-500g": "500g pack",
+                "weight-250g": "250g pack",
+                "add-to-cart": "Add to Cart",
+                "delivery-title": "Delivery Options",
+                "delivery-subtitle": "Choose from our flexible delivery options designed to get fresh millets to your doorstep exactly when you need them.",
+                "delivery1-title": "Same-Day Express",
+                "delivery1-desc": "Order before 2 PM and receive your fresh millets the same day. Available in Visakhapatnam and surrounding areas. Perfect for urgent requirements.",
+                "delivery2-title": "Standard Delivery",
+                "delivery2-desc": "Free delivery on orders above ₹499. Get your millets delivered within 24-48 hours across Andhra Pradesh with secure packaging and quality guarantee.",
+                "delivery3-title": "Subscription Service",
+                "delivery3-desc": "Never run out of millets again. Set up weekly, bi-weekly, or monthly deliveries with 15% savings and priority delivery slots. Cancel anytime.",
+                "delivery4-title": "Fresh Batter Delivery",
+                "delivery4-desc": "Daily fresh batter delivery service for idli/dosa. Order by 8 PM to receive freshly prepared batter the next morning. Available for regular subscribers.",
+                "features-title": "Why Choose Murthys Millet Magic",
+                "features-subtitle": "We're committed to bringing you the highest quality organic millets with uncompromising standards and exceptional service.",
+                "feature1-title": "Certified Organic",
+                "feature1-desc": "All our millets are sourced from certified organic farms with rigorous testing for purity. No chemicals, pesticides, or artificial additives - just pure, natural goodness as nature intended.",
+                "feature2-title": "Premium Quality",
+                "feature2-desc": "Handpicked grains undergo traditional stone cleaning and modern quality checks. Each batch is carefully processed to retain maximum nutrition, taste, and freshness.",
+                "feature3-title": "AI-Powered Support",
+                "feature3-desc": "Get instant answers to your questions with our advanced AI assistant. From nutritional advice to cooking tips, get personalized recommendations 24/7.",
+                "cta-title": "Start Your Healthy Journey Today",
+                "cta-subtitle": "Join thousands of families who have made the switch to premium organic millets for better health and nutrition.",
+                "order-first-pack": "🛒 Order Your First Pack",
+                "footer-title": "Murthys Millet Magic",
+                "footer-desc": "Premium organic millets delivered fresh to your doorstep. Committed to quality, nutrition, and sustainable farming practices for a healthier future.",
+                "footer-links": "Quick Links",
+                "footer-contact": "Contact Us",
+                "footer-hours": "🕒 Mon-Sat: 8 AM - 8 PM",
+                "footer-delivery-areas": "Delivery Areas",
+                "footer-area1": "Visakhapatnam City & Suburbs",
+                "footer-area2": "Same-day delivery available",
+                "footer-area3": "Free delivery on orders ₹499+",
+                "footer-area4": "Express delivery in 2-4 hours",
+                "footer-copyright": "© 2025 Murthys Millet Magic. All rights reserved. | Organic Certified | Farm to Table Excellence",
+                "modal-title": "Place Your Order",
+                "modal-product": "Select Product:",
+                "modal-choose": "Choose your millet variety",
+                "modal-quantity": "Quantity:",
+                "modal-name": "Full Name:",
+                "modal-phone": "Phone Number:",
+                "modal-address": "Delivery Address:",
+                "modal-delivery": "Preferred Delivery:",
+                "modal-delivery-select": "Select delivery option",
+                "modal-same-day": "Same-day Express (₹50 extra)",
+                "modal-next-day": "Next-day Standard (Free above ₹499)",
+                "modal-scheduled": "Schedule for later",
+                "modal-instructions": "Special Instructions (Optional):",
+                "modal-instructions-placeholder": "Any specific delivery instructions or preferences...",
+                "modal-confirm": "Confirm Order"
+            },
+            hi: {
+                "logo": "मूर्ति मिलेट मैजिक",
+                "sale1": "ग्रैंड ओपनिंग: सभी प्रीमियम ऑर्गेनिक मिलेट पर 30% छूट",
+                "sale2": "₹499 से अधिक के ऑर्डर पर निःशुल्क उसी दिन डिलीवरी",
+                "sale3": "100% प्रमाणित ऑर्गेनिक और कीटनाशक मुक्त गारंटी",
+                "sale4": "हर दाने में खेत से टेबल तक की ताजगी",
+                "sale5": "प्रीमियम गुणवत्ता - हाथ से चुना और पत्थर से साफ किया गया",
+                "nav-home": "होम",
+                "nav-products": "उत्पाद",
+                "nav-ai": "AI सहायक",
+                "nav-delivery": "डिलीवरी",
+                "nav-contact": "संपर्क",
+                "order-now": "अभी ऑर्डर करें",
+                "hero-badge": "प्रीमियम ऑर्गेनिक कलेक्शन",
+                "hero-title": "सबसे शुद्ध मिलेट, आपके घर तक ताजा डिलीवरी",
+                "hero-subtitle": "प्रमाणित फार्मों से सावधानीपूर्वक प्राप्त और अत्यधिक देखभाल के साथ प्रोसेस किए गए ऑर्गेनिक मिलेट के बेहतरीन चयन का अनुभव करें।",
+                "shop-collection": "🛍️ कलेक्शन देखें",
+                "try-ai": "🤖 AI सहायक आजमाएं",
+                "ai-title": "अपने व्यक्तिगत मिलेट विशेषज्ञ से मिलें",
+                "ai-desc1": "हमारा उन्नत AI सहायक RAG तकनीक का उपयोग करके आपको तुरंत सटीक जानकारी प्रदान करता है।",
+                "ai-desc2": "अपनी आहार आवश्यकताओं के आधार पर व्यक्तिगत सिफारिशें प्राप्त करें।",
+                "ai-feature1-title": "तुरंत उत्पाद जानकारी",
+                "ai-feature1-desc": "किसी भी मिलेट किस्म के बारे में विस्तृत जानकारी प्राप्त करें",
+                "ai-feature2-title": "पोषण संबंधी मार्गदर्शन",
+                "ai-feature2-desc": "व्यक्तिगत आहार सलाह और भोजन योजना सुझाव प्राप्त करें",
+                "ai-feature3-title": "खाना पकाने की सहायता",
+                "ai-feature3-desc": "पारंपरिक और आधुनिक व्यंजन सीखें",
+                "ai-feature4-title": "स्मार्ट सिफारिशें",
+                "ai-feature4-desc": "अपनी प्राथमिकताओं के आधार पर उत्पाद सुझाव प्राप्त करें",
+                "chat-header": "मिलेट मैजिक AI सहायक",
+                "chat-msg1": "नमस्ते! मैं आपका व्यक्तिगत मिलेट विशेषज्ञ हूं। मैं आपकी आवश्यकताओं के लिए सही मिलेट चुनने में मदद कर सकता हूं।",
+                "chat-msg2": "वजन नियंत्रण के लिए कौन सा मिलेट सबसे अच्छा है?",
+                "chat-msg3": "बेहतरीन सवाल! वजन नियंत्रण के लिए मैं फॉक्सटेल मिलेट और रागी की सिफारिश करूंगा।",
+                "products-title": "प्रीमियम मिलेट कलेक्शन",
+                "products-subtitle": "प्रमाणित ऑर्गेनिक फार्मों से सीधे प्राप्त किस्में, अधिकतम पोषण संरक्षित करने के लिए देखभाल के साथ प्रोसेस की गई।",
+                "product1-name": "प्रीमियम मोती मिलेट (बाजरा)",
+                "product1-desc": "प्रोटीन, आयरन और मैग्नीशियम से भरपूर। पारंपरिक रोटी, दलिया के लिए परफेक्ट।",
+                "product2-name": "ऑर्गेनिक फिंगर मिलेट (रागी)",
+                "product2-desc": "कैल्शियम और अमीनो एसिड का असाधारण स्रोत। बढ़ते बच्चों और हड्डियों के स्वास्थ्य के लिए आदर्श।",
+                "product3-name": "प्रीमियम फॉक्सटेल मिलेट",
+                "product3-desc": "मधुमेह प्रबंधन के लिए उत्कृष्ट कम ग्लाइसेमिक इंडेक्स अनाज।",
+                "product4-name": "मल्टी-मिलेट आटा मिश्रण",
+                "product4-desc": "5 प्रीमियम मिलेट का सावधानीपूर्वक संतुलित मिश्रण।",
+                "product5-name": "ताजा मिलेट इडली/डोसा बैटर",
+                "product5-desc": "प्रीमियम मिलेट मिश्रण से बना ताजा किण्वित बैटर।",
+                "product6-name": "कारीगर मिलेट कुकीज़",
+                "product6-desc": "प्रीमियम मिलेट आटे से हस्तनिर्मित कुकीज़।",
+                "weight-1kg": "1 किलो पैक",
+                "weight-500g": "500 ग्राम पैक",
+                "weight-250g": "250 ग्राम पैक",
+                "add-to-cart": "कार्ट में जोड़ें",
+                "delivery-title": "डिलीवरी विकल्प",
+                "delivery-subtitle": "अपनी आवश्यकताओं के अनुसार लचीले डिलीवरी विकल्प चुनें।",
+                "delivery1-title": "उसी दिन एक्सप्रेस",
+                "delivery1-desc": "दोपहर 2 बजे से पहले ऑर्डर करें और उसी दिन ताजा मिलेट प्राप्त करें।",
+                "delivery2-title": "मानक डिलीवरी",
+                "delivery2-desc": "₹499 से अधिक के ऑर्डर पर मुफ्त डिलीवरी।",
+                "delivery3-title": "सब्स्क्रिप्शन सेवा",
+                "delivery3-desc": "मिलेट की कमी कभी न होने दें। 15% बचत के साथ साप्ताहिक डिलीवरी सेट करें।",
+                "delivery4-title": "ताजा बैटर डिलीवरी",
+                "delivery4-desc": "इडली/डोसा के लिए दैनिक ताजा बैटर डिलीवरी सेवा।",
+                "features-title": "मूर्ति मिलेट मैजिक क्यों चुनें",
+                "features-subtitle": "हम आपको बेहतरीन गुणवत्ता के ऑर्गेनिक मिलेट प्रदान करने के लिए प्रतिबद्ध हैं।",
+                "feature1-title": "प्रमाणित ऑर्गेनिक",
+                "feature1-desc": "हमारे सभी मिलेट प्रमाणित ऑर्गेनिक फार्मों से प्राप्त किए जाते हैं।",
+                "feature2-title": "प्रीमियम गुणवत्ता",
+                "feature2-desc": "हाथ से चुने गए अनाज पारंपरिक पत्थर की सफाई से गुजरते हैं।",
+                "feature3-title": "AI-संचालित सहायता",
+                "feature3-desc": "हमारे उन्नत AI सहायक के साथ तुरंत उत्तर प्राप्त करें।",
+                "cta-title": "आज ही अपनी स्वस्थ यात्रा शुरू करें",
+                "cta-subtitle": "हजारों परिवारों के साथ जुड़ें जिन्होंने बेहतर स्वास्थ्य के लिए मिलेट चुना है।",
+                "order-first-pack": "🛒 अपना पहला पैक ऑर्डर करें",
+                "footer-title": "मूर्ति मिलेट मैजिक",
+                "footer-desc": "आपके घर तक ताजा डिलीवरी के साथ प्रीमियम ऑर्गेनिक मिलेट।",
+                "footer-links": "त्वरित लिंक",
+                "footer-contact": "संपर्क करें",
+                "footer-hours": "🕒 सोम-शनि: सुबह 8 से शाम 8 बजे",
+                "footer-delivery-areas": "डिलीवरी क्षेत्र",
+                "footer-area1": "विशाखापत्तनम शहर और उपनगर",
+                "footer-area2": "उसी दिन डिलीवरी उपलब्ध",
+                "footer-area3": "₹499+ ऑर्डर पर मुफ्त डिलीवरी",
+                "footer-area4": "2-4 घंटे में एक्सप्रेस डिलीवरी",
+                "footer-copyright": "© 2025 मूर्ति मिलेट मैजिक। सभी अधिकार सुरक्षित। | ऑर्गेनिक प्रमाणित",
+                "modal-title": "अपना ऑर्डर दें",
+                "modal-product": "उत्पाद चुनें:",
+                "modal-choose": "अपनी मिलेट किस्म चुनें",
+                "modal-quantity": "मात्रा:",
+                "modal-name": "पूरा नाम:",
+                "modal-phone": "फोन नंबर:",
+                "modal-address": "डिलीवरी पता:",
+                "modal-delivery": "पसंदीदा डिलीवरी:",
+                "modal-delivery-select": "डिलीवरी विकल्प चुनें",
+                "modal-same-day": "उसी दिन एक्सप्रेस (₹50 अतिरिक्त)",
+                "modal-next-day": "अगले दिन मानक (₹499 से अधिक पर मुफ्त)",
+                "modal-scheduled": "बाद के लिए शेड्यूल करें",
+                "modal-instructions": "विशेष निर्देश (वैकल्पिक):",
+                "modal-instructions-placeholder": "कोई विशिष्ट डिलीवरी निर्देश या प्राथमिकताएं...",
+                "modal-confirm": "ऑर्डर की पुष्टि करें"
+            },
+            te: {
+                "logo": "మూర్తి మిల్లెట్ మ్యాజిక్",
+                "sale1": "గ్రాండ్ ఓపెనింగ్: అన్ని ప్రీమియం ఆర్గానిక్ మిల్లెట్స్‌పై 30% తగ్గింపు",
+                "sale2": "₹499 కంటే ఎక్కువ ఆర్డర్‌లపై ఉచిత అదే రోజు డెలివరీ",
+                "sale3": "100% సర్టిఫైడ్ ఆర్గానిక్ మరియు పురుగుమందు రహిత గ్యారంటీ",
+                "sale4": "ప్రతి గింజలో తోట నుండి టేబుల్ వరకు తాజాదనం",
+                "sale5": "ప్రీమియం నాణ్యత - చేతితో ఎంచుకుని రాతితో శుభ్రం చేయబడినది",
+                "nav-home": "హోమ్",
+                "nav-products": "ఉత్పత్తులు",
+                "nav-ai": "AI అసిస్టెంట్",
+                "nav-delivery": "డెలివరీ",
+                "nav-contact": "సంప్రదింపు",
+                "order-now": "ఇప్పుడే ఆర్డర్ చేయండి",
+                "hero-badge": "ప్రీమియం ఆర్గానిక్ కలెక్షన్",
+                "hero-title": "అత్యంత స్వచ్ఛమైన మిల్లెట్స్, మీ ఇంటి వరకు తాజాగా డెలివరీ",
+                "hero-subtitle": "సర్టిఫైడ్ ఫామ్‌ల నుండి జాగ్రత్తగా సేకరించి, వారి సహజ మంచితనం మరియు పోషక విలువలను కాపాడటానికి అత్యంత శ్రద్ధతో ప్రాసెస్ చేయబడిన ఆర్గానిక్ మిల్లెట్‌ల అద్భుతమైన ఎంపికను అనుభవించండి।",
+                "shop-collection": "🛍️ కలెక్షన్ చూడండి",
+                "try-ai": "🤖 AI అసిస్టెంట్ ప్రయత్నించండి",
+                "ai-title": "మీ వ్యక్తిగత మిల్లెట్ నిపుణుడిని కలవండి",
+                "ai-desc1": "మా అధునాతన AI అసిస్టెంట్ RAG టెక్నాలజీని ఉపయోగించి మీకు తక్షణ, ఖచ్చితమైన సమాచారాన్ని అందిస్తుంది।",
+                "ai-desc2": "మీ ఆహార అవసరాల ఆధారంగా వ్యక్తిగతీకరించిన సిఫారసులను పొందండి।",
+                "ai-feature1-title": "తక్షణ ఉత్పత్తి సమాచారం",
+                "ai-feature1-desc": "ఏదైనా మిల్లెట్ రకం గురించి వివరణాత్మక సమాచారాన్ని పొందండి",
+                "ai-feature2-title": "పోషకాహార మార్గదర్శకత్వం",
+                "ai-feature2-desc": "వ్యక్తిగతీకరించిన ఆహార సలహా మరియు భోజన ప్రణాళిక సూచనలను పొందండి",
+                "ai-feature3-title": "వంట సహాయం",
+                "ai-feature3-desc": "సంప్రదాయ మరియు ఆధునిక వంటకాలను నేర్చుకోండి",
+                "ai-feature4-title": "స్మార్ట్ సిఫార్సులు",
+                "ai-feature4-desc": "మీ ప్రాధాన్యతల ఆధారంగా ఉత్పత్తి సూచనలను పొందండి",
+                "chat-header": "మిల్లెట్ మ్యాజిక్ AI అసిస్టెంట్",
+                "chat-msg1": "నమస్కారం! నేను మీ వ్యక్తిగత మిల్లెట్ నిపుణుడిని. మీ అవసరాలకు సరైన మిల్లెట్‌లను ఎంచుకోవడంలో నేను సహాయం చేయగలను.",
+                "chat-msg2": "బరువు నియంత్రణకు ఏ మిల్లెట్ ఉత్తమం?",
+                "chat-msg3": "అద్భుతమైన ప్రశ్న! బరువు నియంత్రణకు నేను ఫాక్స్‌టెయిల్ మిల్లెట్ మరియు రాగిని సిఫార్సు చేస్తాను.",
+                "products-title": "ప్రీమియం మిల్లెట్ కలెక్షన్",
+                "products-subtitle": "సర్టిఫైడ్ ఆర్గానిక్ ఫామ్‌ల నుండి నేరుగా సేకరించిన రకాలు, గరిష్ట పోషణను కాపాడటానికి శ్రద్ధతో ప్రాసెస్ చేయబడ్డాయి.",
+                "product1-name": "ప్రీమియం ముత్యాల మిల్లెట్ (బాజ్రా)",
+                "product1-desc": "ప్రోటీన్, ఐరన్ మరియు మెగ్నీషియంతో సమృద్ధిగా ఉంది. సంప్రదాయ రోటీలు, గంజికి ఖచ్చితం.",
+                "product2-name": "ఆర్గానిక్ ఫింగర్ మిల్లెట్ (రాగి)",
+                "product2-desc": "కాల్షియం మరియు అమైనో యాసిడ్‌ల అసాధారణ మూలం. పెరుగుతున్న పిల్లలకు మరియు ఎముకల ఆరోగ్యానికి అనువైనది.",
+                "product3-name": "ప్రీమియం ఫాక్స్‌టెయిల్ మిల్లెట్",
+                "product3-desc": "మధుమేహ నిర్వహణకు అద్భుతమైన తక్కువ గ్లైసెమిక్ ఇండెక్స్ ధాన్యం.",
+                "product4-name": "మల్టీ-మిల్లెట్ పిండి మిశ్రమం",
+                "product4-desc": "5 ప్రీమియం మిల్లెట్‌ల జాగ్రత్తగా సమతుల్య మిశ్రమం.",
+                "product5-name": "తాజా మిల్లెట్ ఇడ్లీ/దోసె పిండి",
+                "product5-desc": "ప్రీమియం మిల్లెట్ మిశ్రమంతో తయారు చేసిన తాజా పులియబెట్టిన పిండి.",
+                "product6-name": "కళాకారుల మిల్లెట్ కుకీలు",
+                "product6-desc": "ప్రీమియం మిల్లెట్ పిండితో చేతితో తయారు చేసిన కుకీలు.",
+                "weight-1kg": "1 కిలో ప్యాక్",
+                "weight-500g": "500 గ్రాముల ప్యాక్",
+                "weight-250g": "250 గ్రాముల ప్యాక్",
+                "add-to-cart": "కార్ట్‌కు జోడించండి",
+                "delivery-title": "డెలివరీ ఎంపికలు",
+                "delivery-subtitle": "మీ అవసరాలకు అనుగుణంగా అనువైన డెలివరీ ఎంపికలను ఎంచుకోండి.",
+                "delivery1-title": "అదే రోజు ఎక్స్‌ప్రెస్",
+                "delivery1-desc": "మధ్యాహ్నం 2 గంటలకు ముందు ఆర్డర్ చేసి అదే రోజు తాజా మిల్లెట్‌లను పొందండి.",
+                "delivery2-title": "ప్రామాణిక డెలివరీ",
+                "delivery2-desc": "₹499 కంటే ఎక్కువ ఆర్డర్‌లపై ఉచిత డెలివరీ.",
+                "delivery3-title": "సబ్‌స్క్రిప్షన్ సేవ",
+                "delivery3-desc": "మిల్లెట్‌లు ఎప్పుడూ అయిపోకుండా చూసుకోండి. 15% పొదుపుతో వారంవారీ డెలివరీ సెట్ చేయండి.",
+                "delivery4-title": "తాజా పిండి డెలివరీ",
+                "delivery4-desc": "ఇడ్లీ/దోసె కోసం రోజువారీ తాజా పిండి డెలివరీ సేవ.",
+                "features-title": "మూర్తి మిల్లెట్ మ్యాజిక్ ఎందుకు ఎంచుకోవాలి",
+                "features-subtitle": "మేము మీకు అత్యుత్తమ నాణ్యత గల ఆర్గానిక్ మిల్లెట్‌లను అందించడానికి కట్టుబడి ఉన్నాము.",
+                "feature1-title": "సర్టిఫైడ్ ఆర్గానిక్",
+                "feature1-desc": "మా అన్ని మిల్లెట్‌లు సర్టిఫైడ్ ఆర్గానిక్ ఫామ్‌ల నుండి సేకరించబడ్డాయి.",
+                "feature2-title": "ప్రీమియం నాణ్యత",
+                "feature2-desc": "చేతితో ఎంచుకున్న ధాన్యాలు సంప్రదాయ రాతి శుభ్రత చేయబడతాయి.",
+                "feature3-title": "AI-శక్తితో కూడిన మద్దతు",
+                "feature3-desc": "మా అధునాతన AI అసిస్టెంట్‌తో తక్షణ సమాధానాలను పొందండి.",
+                "cta-title": "ఈరోజే మీ ఆరోగ్యకర ప్రయాణాన్ని ప్రారంభించండి",
+                "cta-subtitle": "మెరుగైన ఆరోగ్యం మరియు పోషణ కోసం మిల్లెట్‌లను ఎంచుకున్న వేలాది కుటుంబాలతో చేరండి.",
+                "order-first-pack": "🛒 మీ మొదటి ప్యాక్ ఆర్డర్ చేయండి",
+                "footer-title": "మూర్తి మిల్లెట్ మ్యాజిక్",
+                "footer-desc": "మీ ఇంటి వరకు తాజాగా డెలివరీ చేయబడే ప్రీమియం ఆర్గానిక్ మిల్లెట్‌లు.",
+                "footer-links": "త్వరిత లింకులు",
+                "footer-contact": "మమ్మల్ని సంప్రదించండి",
+                "footer-hours": "🕒 సోమ-శని: ఉదయం 8 నుండి సాయంత్రం 8 వరకు",
+                "footer-delivery-areas": "డెలివరీ ప్రాంతాలు",
+                "footer-area1": "విశాఖపట్నం నగరం మరియు సబర్బ్‌లు",
+                "footer-area2": "అదే రోజు డెలివరీ అందుబాటులో ఉంది",
+                "footer-area3": "₹499+ ఆర్డర్‌లపై ఉచిత డెలివరీ",
+                "footer-area4": "2-4 గంటల్లో ఎక్స్‌ప్రెస్ డెలివరీ",
+                "footer-copyright": "© 2025 మూర్తి మిల్లెట్ మ్యాజిక్. అన్ని హక్కులు సురక్షితం. | ఆర్గానిక్ సర్టిఫైడ్",
+                "modal-title": "మీ ఆర్డర్ ఇవ్వండి",
+                "modal-product": "ఉత్పత్తిని ఎంచుకోండి:",
+                "modal-choose": "మీ మిల్లెట్ రకాన్ని ఎంచుకోండి",
+                "modal-quantity": "పరిమాణం:",
+                "modal-name": "పూర్తి పేరు:",
+                "modal-phone": "ఫోన్ నంబర్:",
+                "modal-address": "డెలివరీ చిరునామా:",
+                "modal-delivery": "ప్రాధాన్య డెలివరీ:",
+                "modal-delivery-select": "డెలివరీ ఎంపికను ఎంచుకోండి",
+                "modal-same-day": "అదే రోజు ఎక్స్‌ప్రెస్ (₹50 అదనపు)",
+                "modal-next-day": "మరుసటి రోజు ప్రామాణిక (₹499 కంటే ఎక్కువ ఉచితం)",
+                "modal-scheduled": "తర్వాత కోసం షెడ్యూల్ చేయండి",
+                "modal-instructions": "ప్రత్యేక సూచనలు (ఐచ్ఛికం):",
+                "modal-instructions-placeholder": "ఏదైనా నిర్దిష్ట డెలివరీ సూచనలు లేదా ప్రాధాన్యతలు...",
+                "modal-confirm": "ఆర్డర్ ధృవీకరించండి"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        // Language functions
+        function toggleLanguageDropdown() {
+            const dropdown = document.getElementById('language-dropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function changeLanguage(lang) {
+            currentLanguage = lang;
+            const langNames = { 'en': 'EN', 'hi': 'हि', 'te': 'తె' };
+            document.getElementById('current-language').textContent = langNames[lang];
+            
+            // Update active language option
+            document.querySelectorAll('.language-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            document.querySelector(`[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+            
+            // Translate all text
+            translatePage(lang);
+            
+            // Close dropdown
+            document.getElementById('language-dropdown').classList.remove('active');
+        }
+
+        function translatePage(lang) {
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        if (element.hasAttribute('placeholder')) {
+                            element.placeholder = translations[lang][key];
+                        }
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 100;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.top = '0px';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.top = '2rem';
+                header.style.background = 'rgba(255, 255, 255, 0.8)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Modal functions
+        function openOrderModal(productName = '') {
+            const modal = document.getElementById('orderModal');
+            const productSelect = document.getElementById('productName');
+            
+            if (productName) {
+                productSelect.value = productName;
+            }
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            
+            // Ensure modal is scrolled to top
+            modal.scrollTop = 0;
+            
+            // Animation
+            const modalContent = modal.querySelector('.modal-content');
+            modalContent.style.transform = 'scale(0.9)';
+            modalContent.style.opacity = '0';
+            
+            requestAnimationFrame(() => {
+                modalContent.style.transform = 'scale(1)';
+                modalContent.style.opacity = '1';
+                modalContent.style.transition = 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
+            });
+
+            // Focus first input for accessibility
+            setTimeout(() => {
+                const firstInput = modal.querySelector('select, input');
+                if (firstInput) {
+                    firstInput.focus();
+                }
+            }, 250);
+        }
+
+        function closeOrderModal() {
+            const modal = document.getElementById('orderModal');
+            const modalContent = modal.querySelector('.modal-content');
+            
+            modalContent.style.transform = 'scale(0.9)';
+            modalContent.style.opacity = '0';
+            
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('orderModal');
+            const languageDropdown = document.getElementById('language-dropdown');
+            
+            if (event.target === modal) {
+                closeOrderModal();
+            }
+            
+            if (!event.target.closest('.language-selector')) {
+                languageDropdown.classList.remove('active');
+            }
+        }
+
+        // Order submission with enhanced validation
+        function submitOrder(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const orderData = {
+                product: formData.get('productName'),
+                quantity: formData.get('quantity'),
+                customerName: formData.get('customerName'),
+                phone: formData.get('phone'),
+                address: formData.get('address'),
+                deliveryTime: formData.get('deliveryTime'),
+                specialInstructions: formData.get('specialInstructions')
+            };
+            
+            // Generate order ID
+            const orderId = 'MM' + Date.now().toString().slice(-6);
+            
+            // Multi-language success message
+            let successMessage = '';
+            if (currentLanguage === 'hi') {
+                successMessage = `धन्यवाद, ${orderData.customerName}! 🎉\n\nआपका ऑर्डर कन्फर्म हो गया है:\n• ${orderData.quantity}x ${orderData.product}\n• डिलीवरी: ${orderData.deliveryTime}\n\nहम जल्द ही आपसे ${orderData.phone} पर संपर्क करेंगे।\n\nऑर्डर ID: ${orderId}`;
+            } else if (currentLanguage === 'te') {
+                successMessage = `ధన్యవాదాలు, ${orderData.customerName}! 🎉\n\nమీ ఆర్డర్ కన్ఫర్మ్ అయ్యింది:\n• ${orderData.quantity}x ${orderData.product}\n• డెలివరీ: ${orderData.deliveryTime}\n\nమేము త్వరలో మిమ్మల్ని ${orderData.phone} వద్ద సంప్రదిస్తాము।\n\nఆర్డర్ ID: ${orderId}`;
+            } else {
+                successMessage = `Thank you, ${orderData.customerName}! 🎉\n\nYour order has been confirmed:\n• ${orderData.quantity}x ${orderData.product}\n• Delivery: ${orderData.deliveryTime}\n\nWe'll contact you shortly at ${orderData.phone}.\n\nOrder ID: ${orderId}`;
+            }
+            
+            alert(successMessage);
+            
+            // Reset form and close modal
+            event.target.reset();
+            closeOrderModal();
+            
+            // Enhanced analytics (would integrate with actual analytics in production)
+            console.log('Order Analytics:', {
+                ...orderData,
+                orderId,
+                timestamp: new Date().toISOString(),
+                language: currentLanguage,
+                userAgent: navigator.userAgent
+            });
+        }
+
+        // Chat function with multi-language support
+        function openChat() {
+            let chatMessage = '';
+            if (currentLanguage === 'hi') {
+                chatMessage = `💬 मूर्ति मिलेट मैजिक में आपका स्वागत है!\n\nहमारी AI सहायक और ग्राहक सहायता टीम आपकी सहायता के लिए तैयार है:\n\n🤖 तुरंत उत्पाद जानकारी के लिए हमारे AI सहायक को आजमाएं\n📞 कॉल करें: +91 9876-543-210\n📧 ईमेल: hello@murthysmillet.com\n💬 व्हाट्सएप सहायता उपलब्ध\n\nआपकी आवश्यकताओं के लिए सबसे अच्छे मिलेट खोजने में हम आपकी कैसे मदद कर सकते हैं?`;
+            } else if (currentLanguage === 'te') {
+                chatMessage = `💬 మూర్తి మిల్లెట్ మ్యాజిక్‌కు స్వాగతం!\n\nమా AI అసిస్టెంట్ మరియు కస్టమర్ సపోర్ట్ టీమ్ మీకు సహాయం చేయడానికి ఇక్కడ ఉన్నాయి:\n\n🤖 తక్షణ ఉత్పత్తి సమాచారం కోసం మా AI అసిస్టెంట్‌ను ప్రయత్నించండి\n📞 కాల్ చేయండి: +91 9876-543-210\n📧 ఇమెయిల్: hello@murthysmillet.com\n💬 వాట్సాప్ మద్దతు అందుబాటులో ఉంది\n\nమీ అవసరాలకు సరైన మిల్లెట్ కనుగొనడంలో మేము మీకు ఎలా సహాయం చేయగలము?`;
+            } else {
+                chatMessage = `💬 Welcome to Murthys Millet Magic!\n\nOur AI assistant and customer support team are here to help you:\n\n🤖 Try our AI Assistant for instant product info\n📞 Call: +91 9876-543-210\n📧 Email: hello@murthysmillet.com\n💬 WhatsApp support available\n\nHow can we help you find the perfect millet for your needs?`;
+            }
+            
+            alert(chatMessage);
+        }
+
+        // Enhanced add to cart with animation
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const originalText = this.textContent;
+                    const originalBg = this.style.background;
+                    
+                    let addedText = 'Added! ✓';
+                    if (currentLanguage === 'hi') {
+                        addedText = 'जोड़ा गया! ✓';
+                    } else if (currentLanguage === 'te') {
+                        addedText = 'జోడించబడింది! ✓';
+                    }
+                    
+                    this.textContent = addedText;
+                    this.style.background = 'var(--green-500)';
+                    
+                    setTimeout(() => {
+                        this.textContent = originalText;
+                        this.style.background = originalBg;
+                    }, 2000);
+                });
+            });
+        });
+
+        // Performance optimizations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lazy load animations
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        setTimeout(() => {
+                            el.classList.add('visible');
+                        }, index * 50);
+                    }
+                });
+            }, 100);
+
+            // Preload critical images
+            const imageUrls = [
+                'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text y="18" font-size="18">🌾</text></svg>',
+                'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><text y="18" font-size="18">🌿</text></svg>'
+            ];
+
+            imageUrls.forEach(url => {
+                const img = new Image();
+                img.src = url;
+            });
+
+            // Initialize enhanced marquee
+            const marquee = document.querySelector('.marquee');
+            if (marquee) {
+                marquee.addEventListener('mouseenter', () => {
+                    marquee.style.animationPlayState = 'paused';
+                });
+                marquee.addEventListener('mouseleave', () => {
+                    marquee.style.animationPlayState = 'running';
+                });
+            }
+
+            // Enhanced scroll performance
+            let ticking = false;
+            function updateHeader() {
+                const header = document.querySelector('.header');
+                const scrollY = window.pageYOffset;
+                
+                if (scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateHeader);
+                    ticking = true;
+                }
+            });
+
+            // Initialize product card interactions
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-0.25rem)';
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Enhanced form validation
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                const inputs = form.querySelectorAll('input, select, textarea');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        this.classList.toggle('invalid', !this.checkValidity());
+                    });
+                });
+            });
+        });
+
+        // Error handling and fallbacks
+        window.addEventListener('error', function(e) {
+            console.warn('Non-critical error:', e.message);
+        });
+
+        // Service worker registration for better performance (would be implemented in production)
+        if ('serviceWorker' in navigator) {
+            // navigator.serviceWorker.register('/sw.js');
+        }
+
+        // Enhanced accessibility
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeOrderModal();
+                document.getElementById('language-dropdown').classList.remove('active');
+            }
+        });
+
+        // Analytics and performance monitoring
+        window.addEventListener('load', function() {
+            console.log('Page loaded in:', performance.now().toFixed(2), 'ms');
+            
+            // Track user interactions
+            document.addEventListener('click', function(e) {
+                if (e.target.matches('[data-track]')) {
+                    console.log('User interaction:', e.target.dataset.track);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
