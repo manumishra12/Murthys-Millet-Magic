@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Murthys Millet Magic - Premium Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --cream: #fefcf9;
+            --warm-white: #faf8f5;
+            --light-sage: #f5f8f0;
+            --sage-green: #e8f1e0;
+            --soft-green: #d4e7c5;
+            --muted-green: #97b885;
+            --forest-green: #5a7c65;
+            --deep-forest: #3d5a47;
+            --charcoal: #2d3436;
+            --warm-gray: #636e72;
+            --light-gray: #ddd6d0;
+            --soft-gray: #f8f6f3;
+            --accent-gold: #d4af37;
+            --warm-gold: #c9a96e;
+            --shadow-soft: 0 2px 8px rgba(93, 124, 101, 0.08);
+            --shadow-medium: 0 4px 20px rgba(93, 124, 101, 0.12);
+            --shadow-large: 0 12px 40px rgba(93, 124, 101, 0.15);
+            --shadow-xl: 0 20px 60px rgba(93, 124, 101, 0.18);
+            --gradient-primary: linear-gradient(135deg, var(--sage-green) 0%, var(--light-sage) 100%);
+            --gradient-premium: linear-gradient(135deg, var(--accent-gold) 0%, var(--warm-gold) 100%);
+            --gradient-card: linear-gradient(135deg, var(--white) 0%, var(--warm-white) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--charcoal);
+            background: var(--cream);
+            font-feature-settings: 'cv11', 'ss01';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(254, 252, 249, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--light-gray);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header.scrolled {
+            background: rgba(254, 252, 249, 0.98);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.02);
+        }
+
+        .logo-image {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            filter: drop-shadow(0 2px 8px rgba(93, 124, 101, 0.2));
+        }
+
+        .logo:hover .logo-image {
+            transform: rotate(5deg) scale(1.05);
+            filter: drop-shadow(0 4px 12px rgba(93, 124, 101, 0.3));
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+            letter-spacing: -0.02em;
+        }
+
+        .nav-center {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--warm-gray);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            background: var(--accent-gold);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-links a:hover {
+            color: var(--deep-forest);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            background: var(--soft-gray);
+            border: 1px solid var(--light-gray);
+            border-radius: 50px;
+            padding: 0.75rem 1.25rem 0.75rem 3rem;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            width: 320px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--muted-green);
+            background: var(--white);
+            box-shadow: 0 0 0 3px rgba(151, 184, 133, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            color: var(--warm-gray);
+            font-size: 1.1rem;
+        }
+
+        .cart-icon {
+            background: var(--gradient-premium);
+            color: var(--white);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .cart-icon:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--forest-green);
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.5rem;
+            border-radius: 20px;
+            min-width: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+        }
+
+        /* Price Update Panel */
+        .price-update-panel {
+            position: fixed;
+            top: 100px;
+            right: 2rem;
+            background: var(--gradient-card);
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            padding: 1.5rem;
+            width: 300px;
+            box-shadow: var(--shadow-large);
+            z-index: 999;
+            transform: translateX(320px);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .price-update-panel.open {
+            transform: translateX(0);
+        }
+
+        .price-panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .price-panel-title {
+            font-weight: 600;
+            color: var(--deep-forest);
+            font-size: 1rem;
+        }
+
+        .price-panel-close {
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            cursor: pointer;
+            color: var(--warm-gray);
+            transition: color 0.3s ease;
+        }
+
+        .price-panel-close:hover {
+            color: var(--charcoal);
+        }
+
+        .price-update-btn {
+            background: var(--gradient-premium);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+
+        .price-update-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .admin-toggle {
+            position: fixed;
+            bottom: 120px;
+            right: 2rem;
+            background: var(--deep-forest);
+            color: var(--white);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-medium);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .admin-toggle:hover {
+            transform: scale(1.1);
+            background: var(--forest-green);
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            margin-top: 5rem;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            border-radius: 0 0 3rem 3rem;
+            background: var(--gradient-primary);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        .slide-content {
+            text-align: center;
+            max-width: 700px;
+            padding: 3rem;
+        }
+
+        .slide-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--deep-forest);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .slide-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--deep-forest);
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .slide-content p {
+            font-size: 1.3rem;
+            color: var(--forest-green);
+            margin-bottom: 2.5rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        .slide-cta {
+            background: var(--gradient-premium);
+            color: var(--white);
+            padding: 1.25rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .slide-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-large);
+        }
+
+        .carousel-nav {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .carousel-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+        }
+
+        .carousel-dot.active {
+            background: var(--white);
+            transform: scale(1.2);
+            border-color: var(--accent-gold);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: var(--white);
+            padding: 2.5rem 0;
+            border-bottom: 1px solid var(--light-gray);
+            position: sticky;
+            top: 5rem;
+            z-index: 100;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .filter-button {
+            background: var(--soft-gray);
+            border: 1px solid var(--light-gray);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--warm-gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .filter-button:hover {
+            background: var(--sage-green);
+            border-color: var(--muted-green);
+            color: var(--deep-forest);
+            transform: translateY(-1px);
+        }
+
+        .filter-button.active {
+            background: var(--gradient-premium);
+            border-color: var(--accent-gold);
+            color: var(--white);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .filter-row-2 {
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .price-filters {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .sort-select {
+            background: var(--white);
+            border: 1px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 0.75rem 1.25rem;
+            font-size: 0.9rem;
+            color: var(--charcoal);
+            cursor: pointer;
+            font-family: inherit;
+            min-width: 180px;
+            transition: all 0.3s ease;
+        }
+
+        .sort-select:focus {
+            outline: none;
+            border-color: var(--muted-green);
+            box-shadow: 0 0 0 3px rgba(151, 184, 133, 0.1);
+        }
+
+        .results-count {
+            font-size: 0.9rem;
+            color: var(--warm-gray);
+            font-weight: 500;
+        }
+
+        /* Products Grid */
+        .products-section {
+            padding: 4rem 0;
+            background: var(--cream);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--gradient-card);
+            border: 1px solid var(--light-gray);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            position: relative;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--muted-green);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            background: var(--gradient-premium);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 10;
+            box-shadow: var(--shadow-soft);
+            letter-spacing: 0.3px;
+        }
+
+        .product-image {
+            height: 220px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--deep-forest);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3) 0%, transparent 60%);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-category {
+            color: var(--forest-green);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+        }
+
+        .product-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--deep-forest);
+            line-height: 1.3;
+        }
+
+        .product-card p {
+            color: var(--warm-gray);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .product-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .benefit-tag {
+            background: var(--sage-green);
+            color: var(--forest-green);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid var(--soft-green);
+        }
+
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        .product-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--deep-forest);
+            background: var(--gradient-premium);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-weight {
+            font-size: 0.8rem;
+            color: var(--warm-gray);
+            background: var(--soft-gray);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .quick-view-btn {
+            flex: 1;
+            background: var(--soft-gray);
+            color: var(--warm-gray);
+            border: 1px solid var(--light-gray);
+            padding: 1rem;
+            border-radius: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        .quick-view-btn:hover {
+            background: var(--sage-green);
+            color: var(--deep-forest);
+            transform: translateY(-2px);
+        }
+
+        .add-to-cart {
+            flex: 2;
+            background: var(--gradient-premium);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Load More Button */
+        .load-more-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .load-more-btn {
+            background: var(--soft-gray);
+            color: var(--warm-gray);
+            border: 1px solid var(--light-gray);
+            padding: 1.25rem 3rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+
+        .load-more-btn:hover {
+            background: var(--sage-green);
+            color: var(--deep-forest);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .price-update-panel {
+                right: 1rem;
+                width: 280px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .search-input {
+                width: 220px;
+            }
+
+            .hero-carousel {
+                height: 400px;
+            }
+
+            .slide-content h2 {
+                font-size: 2.5rem;
+            }
+
+            .slide-content p {
+                font-size: 1.1rem;
+            }
+
+            .filter-controls {
+                gap: 0.75rem;
+            }
+
+            .filter-row-2 {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .product-actions {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .quick-view-btn, .add-to-cart {
+                flex: 1;
+            }
+
+            .price-update-panel {
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 90%;
+                max-width: 320px;
+            }
+
+            .admin-toggle {
+                bottom: 100px;
+                right: 1rem;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Chat Button */
+        .chat-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-premium);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-large);
+            transition: all 0.4s ease;
+            z-index: 1000;
+            border: none;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        /* Price notification */
+        .price-notification {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--gradient-card);
+            border: 1px solid var(--light-gray);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-xl);
+            z-index: 2000;
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.4s ease;
+        }
+
+        .price-notification.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .notification-content {
+            text-align: center;
+        }
+
+        .notification-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .notification-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--deep-forest);
+            margin-bottom: 0.5rem;
+        }
+
+        .notification-message {
+            color: var(--warm-gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .notification-btn {
+            background: var(--gradient-premium);
+            color: var(--white);
+            border: none;
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Price Update Panel -->
+    <div class="price-update-panel" id="pricePanel">
+        <div class="price-panel-header">
+            <div class="price-panel-title">💰 Price Management</div>
+            <button class="price-panel-close" onclick="closePricePanel()">×</button>
+        </div>
+        <button class="price-update-btn" onclick="updatePricesFromFile()">📄 Sync Prices from File</button>
+        <button class="price-update-btn" onclick="showPriceEditor()">✏️ Edit Prices</button>
+        <button class="price-update-btn" onclick="resetPrices()">🔄 Reset to Default</button>
+        <div style="font-size: 0.8rem; color: var(--warm-gray); margin-top: 1rem;">
+            Simulates reading from: prices.txt
+        </div>
+    </div>
+
+    <!-- Admin Toggle -->
+    <button class="admin-toggle" onclick="togglePricePanel()" title="Price Management">⚙️</button>
+
+    <!-- Price Notification -->
+    <div class="price-notification" id="priceNotification">
+        <div class="notification-content">
+            <div class="notification-icon">✅</div>
+            <div class="notification-title">Prices Updated!</div>
+            <div class="notification-message">All product prices have been successfully updated from the configuration file.</div>
+            <button class="notification-btn" onclick="hidePriceNotification()">Got it</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <svg class="logo-image" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Outer circle -->
+                    <circle cx="100" cy="100" r="95" fill="none" stroke="#3d5a47" stroke-width="3"/>
+                    
+                    <!-- Inner sun rays -->
+                    <g stroke="#c9a96e" stroke-width="2" opacity="0.8">
+                        <line x1="100" y1="20" x2="100" y2="35" />
+                        <line x1="135" y1="25" x2="130" y2="38" />
+                        <line x1="165" y1="45" x2="155" y2="55" />
+                        <line x1="180" y1="75" x2="167" y2="82" />
+                        <line x1="185" y1="110" x2="172" y2="110" />
+                        <line x1="180" y1="145" x2="167" y2="138" />
+                        <line x1="165" y1="175" x2="155" y2="165" />
+                        <line x1="135" y1="195" x2="130" y2="182" />
+                        <line x1="100" y1="200" x2="100" y2="185" />
+                        <line x1="65" y1="195" x2="70" y2="182" />
+                        <line x1="35" y1="175" x2="45" y2="165" />
+                        <line x1="20" y1="145" x2="33" y2="138" />
+                        <line x1="15" y1="110" x2="28" y2="110" />
+                        <line x1="20" y1="75" x2="33" y2="82" />
+                        <line x1="35" y1="45" x2="45" y2="55" />
+                        <line x1="65" y1="25" x2="70" y2="38" />
+                    </g>
+                    
+                    <!-- Central sun circle -->
+                    <circle cx="100" cy="100" r="40" fill="#d4af37" opacity="0.9"/>
+                    
+                    <!-- Central wheat stalk -->
+                    <g fill="#3d5a47">
+                        <!-- Main stem -->
+                        <rect x="98" y="70" width="4" height="60" rx="2"/>
+                        
+                        <!-- Wheat grains -->
+                        <ellipse cx="95" cy="75" rx="3" ry="6" transform="rotate(-15 95 75)"/>
+                        <ellipse cx="105" cy="80" rx="3" ry="6" transform="rotate(15 105 80)"/>
+                        <ellipse cx="95" cy="85" rx="3" ry="6" transform="rotate(-15 95 85)"/>
+                        <ellipse cx="105" cy="90" rx="3" ry="6" transform="rotate(15 105 90)"/>
+                        <ellipse cx="95" cy="95" rx="3" ry="6" transform="rotate(-15 95 95)"/>
+                        <ellipse cx="105" cy="100" rx="3" ry="6" transform="rotate(15 105 100)"/>
+                        <ellipse cx="95" cy="105" rx="3" ry="6" transform="rotate(-15 95 105)"/>
+                        <ellipse cx="105" cy="110" rx="3" ry="6" transform="rotate(15 105 110)"/>
+                    </g>
+                    
+                    <!-- Side wheat stalks -->
+                    <g fill="#5a7c65" opacity="0.8">
+                        <!-- Left stalk -->
+                        <rect x="78" y="100" width="3" height="25" rx="1" transform="rotate(-20 78 100)"/>
+                        <ellipse cx="75" cy="105" rx="2" ry="4" transform="rotate(-30 75 105)"/>
+                        <ellipse cx="73" cy="110" rx="2" ry="4" transform="rotate(-30 73 110)"/>
+                        <ellipse cx="71" cy="115" rx="2" ry="4" transform="rotate(-30 71 115)"/>
+                        
+                        <!-- Right stalk -->
+                        <rect x="119" y="100" width="3" height="25" rx="1" transform="rotate(20 119 100)"/>
+                        <ellipse cx="125" cy="105" rx="2" ry="4" transform="rotate(30 125 105)"/>
+                        <ellipse cx="127" cy="110" rx="2" ry="4" transform="rotate(30 127 110)"/>
+                        <ellipse cx="129" cy="115" rx="2" ry="4" transform="rotate(30 129 115)"/>
+                    </g>
+                    
+                    <!-- Decorative leaves -->
+                    <g fill="#97b885" opacity="0.6">
+                        <path d="M 70 130 Q 60 125 70 120 Q 80 125 70 130"/>
+                        <path d="M 130 130 Q 140 125 130 120 Q 120 125 130 130"/>
+                        <path d="M 85 140 Q 75 135 85 130 Q 95 135 85 140"/>
+                        <path d="M 115 140 Q 125 135 115 130 Q 105 135 115 140"/>
+                    </g>
+                </svg>
+                <span class="logo-text">Murthys Millet Magic</span>
+            </a>
+            
+            <div class="nav-center">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Collection</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-actions">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="Search premium organic millets..." id="searchInput">
+                </div>
+                <div class="cart-icon" onclick="showCart()">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel" id="home">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="slide-content">
+                    <div class="slide-badge">PREMIUM ORGANIC COLLECTION</div>
+                    <h2>Nourishing Traditions, Perfected</h2>
+                    <p>Discover our exquisite collection of 50+ premium organic millets, each variety carefully sourced from certified farms and processed with artisanal precision</p>
+                    <a href="#products" class="slide-cta">Explore Our Collection</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <div class="slide-badge">FARM TO TABLE EXCELLENCE</div>
+                    <h2>Pure. Natural. Exceptional.</h2>
+                    <p>Experience unmatched quality with our handpicked millets, processed using time-honored traditional methods to preserve maximum nutrition and authentic flavors</p>
+                    <a href="#products" class="slide-cta">Shop Premium Millets</a>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <div class="slide-badge">WELLNESS & VITALITY</div>
+                    <h2>Fuel Your Wellness Journey</h2>
+                    <p>Transform your health with our superfood millets - packed with essential proteins, dietary fiber, and vital minerals for optimal nutrition and sustained energy</p>
+                    <a href="#products" class="slide-cta">Start Your Journey</a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <div class="carousel-dot active" onclick="currentSlide(1)"></div>
+            <div class="carousel-dot" onclick="currentSlide(2)"></div>
+            <div class="carousel-dot" onclick="currentSlide(3)"></div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-controls">
+                <button class="filter-button active" data-filter="all">All Products</button>
+                <button class="filter-button" data-filter="whole-grains">Whole Grains</button>
+                <button class="filter-button" data-filter="flour">Flour & Blends</button>
+                <button class="filter-button" data-filter="ready-to-cook">Ready to Cook</button>
+                <button class="filter-button" data-filter="snacks">Artisan Snacks</button>
+                <button class="filter-button" data-filter="breakfast">Breakfast Essentials</button>
+                <button class="filter-button" data-filter="traditional">Heritage Varieties</button>
+            </div>
+            
+            <div class="filter-row-2">
+                <div class="price-filters">
+                    <button class="filter-button" data-price="under-100">Under ₹100</button>
+                    <button class="filter-button" data-price="100-200">₹100-200</button>
+                    <button class="filter-button" data-price="200-300">₹200-300</button>
+                    <button class="filter-button" data-price="above-300">Premium ₹300+</button>
+                </div>
+                
+                <select class="sort-select" id="sortSelect">
+                    <option value="featured">Featured Products</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="name">Alphabetical</option>
+                    <option value="newest">Latest Arrivals</option>
+                </select>
+                
+                <div class="results-count">
+                    Showing <span id="resultCount">50</span> premium products
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically generated by JavaScript -->
+            </div>
+            
+            <div class="load-more-section">
+                <button class="load-more-btn" onclick="loadMoreProducts()" id="loadMoreBtn">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Button -->
+    <button class="chat-button" onclick="openChat()">💬</button>
+
+    <script>
+        // ============ PRICE CONFIGURATION SYSTEM ============
+        // This simulates reading from a "prices.txt" file
+        // In a real application, this would fetch from a server endpoint
+        let priceConfig = {
+            // Format: productId: price
+            1: 145,   // Premium Pearl Millet
+            2: 165,   // Organic Finger Millet
+            3: 185,   // Premium Foxtail Millet
+            4: 195,   // Little Millet
+            5: 175,   // Barnyard Millet
+            6: 180,   // Kodo Millet
+            7: 170,   // Proso Millet
+            8: 220,   // Brown Top Millet
+            9: 135,   // Sorghum
+            10: 280,  // Amaranth Seeds
+            11: 195,  // Multi-Millet Flour
+            12: 155,  // Ragi Flour
+            13: 140,  // Bajra Flour
+            14: 130,  // Jowar Flour
+            15: 225,  // Pancake Mix
+            16: 245,  // Baking Flour
+            17: 185,  // Sattu Mix
+            18: 265,  // Baby Cereal
+            19: 95,   // Idli Batter
+            20: 95,   // Dosa Batter
+            21: 165,  // Upma Mix
+            22: 175,  // Khichdi Mix
+            23: 185,  // Pasta
+            24: 165,  // Noodles
+            25: 155,  // Vermicelli
+            26: 225,  // Cookies
+            27: 285,  // Energy Bars
+            28: 195,  // Snack Mix
+            29: 165,  // Crackers
+            30: 245,  // Sweet Laddu
+            31: 295,  // Protein Balls
+            32: 175,  // Chips
+            33: 245,  // Breakfast Cereal
+            34: 215,  // Porridge Mix
+            35: 325,  // Muesli
+            36: 275,  // Chocolate Cereal
+            37: 295,  // Granola
+            38: 385,  // Ancient Seed Mix
+            39: 420,  // Wild Millet
+            40: 350,  // Tribal Mix
+            41: 295,  // Himalayan Buckwheat
+            42: 275,  // Desert Millet
+            43: 445,  // Milk Powder
+            44: 205,  // Fermented Flour
+            45: 235,  // Sprouted Mix
+            46: 485,  // Protein Powder
+            47: 365,  // Golden Honey
+            48: 185,  // Face Pack
+            49: 145,  // Baby Rusk
+            50: 525   // Vitamin Capsules
+        };
+
+        // Alternative price configurations (simulating different price files)
+        const priceConfigurations = {
+            'summer_sale': {
+                // 20% discount on all items
+                1: 116, 2: 132, 3: 148, 4: 156, 5: 140, 6: 144, 7: 136, 8: 176, 9: 108, 10: 224,
+                11: 156, 12: 124, 13: 112, 14: 104, 15: 180, 16: 196, 17: 148, 18: 212, 19: 76, 20: 76,
+                21: 132, 22: 140, 23: 148, 24: 132, 25: 124, 26: 180, 27: 228, 28: 156, 29: 132, 30: 196,
+                31: 236, 32: 140, 33: 196, 34: 172, 35: 260, 36: 220, 37: 236, 38: 308, 39: 336, 40: 280,
+                41: 236, 42: 220, 43: 356, 44: 164, 45: 188, 46: 388, 47: 292, 48: 148, 49: 116, 50: 420
+            },
+            'premium_pricing': {
+                // 15% premium pricing
+                1: 167, 2: 190, 3: 213, 4: 224, 5: 201, 6: 207, 7: 196, 8: 253, 9: 155, 10: 322,
+                11: 224, 12: 178, 13: 161, 14: 150, 15: 259, 16: 282, 17: 213, 18: 305, 19: 109, 20: 109,
+                21: 190, 22: 201, 23: 213, 24: 190, 25: 178, 26: 259, 27: 328, 28: 224, 29: 190, 30: 282,
+                31: 339, 32: 201, 33: 282, 34: 247, 35: 374, 36: 316, 37: 339, 38: 443, 39: 483, 40: 403,
+                41: 339, 42: 316, 43: 512, 44: 236, 45: 270, 46: 558, 47: 420, 48: 213, 49: 167, 50: 604
+            },
+            'festival_special': {
+                // Mixed pricing for festival season
+                1: 139, 2: 159, 3: 179, 4: 189, 5: 169, 6: 174, 7: 164, 8: 214, 9: 129, 10: 274,
+                11: 189, 12: 149, 13: 134, 14: 124, 15: 219, 16: 239, 17: 179, 18: 259, 19: 89, 20: 89,
+                21: 159, 22: 169, 23: 179, 24: 159, 25: 149, 26: 219, 27: 279, 28: 189, 29: 159, 30: 239,
+                31: 289, 32: 169, 33: 239, 34: 209, 35: 319, 36: 269, 37: 289, 38: 379, 39: 414, 40: 344,
+                41: 289, 42: 269, 43: 439, 44: 199, 45: 229, 46: 479, 47: 359, 48: 179, 49: 139, 50: 519
+            }
+        };
+
+        // Product data with dynamic pricing
+        const products = [
+            // Whole Grains
+            { id: 1, name: "Premium Pearl Millet (Bajra)", category: "whole-grains", weight: "1kg", icon: "🌾", badge: "Organic Certified", benefits: ["High Protein", "Iron Rich", "Gluten Free", "Energy Boost"], description: "Premium quality pearl millet, meticulously sourced from certified organic farms. Rich in protein, iron, and magnesium for sustained energy and optimal nutrition." },
+            { id: 2, name: "Organic Finger Millet (Ragi)", category: "whole-grains", weight: "1kg", icon: "🌿", badge: "Calcium Power", benefits: ["High Calcium", "Bone Health", "Antioxidants", "Kids Favorite"], description: "Exceptional source of calcium and amino acids, making it ideal for growing children and bone health. Naturally rich in antioxidants." },
+            { id: 3, name: "Premium Foxtail Millet", category: "whole-grains", weight: "1kg", icon: "🌱", badge: "Diabetic Friendly", benefits: ["Low GI", "Weight Management", "Sustained Energy", "Heart Health"], description: "Low glycemic index grain excellent for diabetes management and weight control. High in fiber and protein for sustained energy." },
+            { id: 4, name: "Little Millet (Samai)", category: "whole-grains", weight: "1kg", icon: "🌾", badge: "Easy Digest", benefits: ["Light Grain", "B-Vitamins", "Quick Cook", "All Ages"], description: "Small grain with exceptional nutrition. Easy to digest and cook, perfect for light meals and suitable for all age groups." },
+            { id: 5, name: "Barnyard Millet (Sanwa)", category: "whole-grains", weight: "1kg", icon: "🌾", badge: "Fasting Special", benefits: ["Vrat Special", "Low Calorie", "Quick Cook", "Mild Flavor"], description: "Traditional millet perfect for fasting and weight management. Quick cooking with mild flavor and excellent digestibility." },
+            { id: 6, name: "Kodo Millet (Varagu)", category: "whole-grains", weight: "1kg", icon: "🌿", badge: "Antioxidant Rich", benefits: ["High Fiber", "Heart Health", "Detox Properties", "Traditional"], description: "High antioxidant millet excellent for cardiovascular health and natural detoxification. Rich in dietary fiber." },
+            { id: 7, name: "Proso Millet (Chena)", category: "whole-grains", weight: "1kg", icon: "🌱", badge: "Protein Power", benefits: ["High Protein", "Quick Energy", "Versatile Use", "Gluten Free"], description: "High protein millet with quick cooking properties. Versatile grain perfect for various culinary applications." },
+            { id: 8, name: "Brown Top Millet", category: "whole-grains", weight: "1kg", icon: "🌾", badge: "Rare Heritage", benefits: ["Unique Variety", "Nutritious", "Traditional", "Antioxidants"], description: "Rare heritage variety with unique nutritional profile. Exceptional taste and traditional significance." },
+            { id: 9, name: "Organic Sorghum (Jowar)", category: "whole-grains", weight: "1kg", icon: "🌿", badge: "Staple Grain", benefits: ["Gluten Free", "Energy Rich", "Economical", "Versatile"], description: "Popular staple grain rich in energy and essential nutrients. Economical choice for daily nutrition." },
+            { id: 10, name: "Premium Amaranth Seeds", category: "whole-grains", weight: "500g", icon: "🌱", badge: "Superfood", benefits: ["Complete Protein", "Lysine Rich", "Immunity Boost", "Ancient Grain"], description: "Complete protein superfood with exceptional amino acid profile. Ancient grain for modern nutrition needs." },
+
+            // Flour & Blends (continued with enhanced descriptions...)
+            { id: 11, name: "Artisan Multi-Millet Flour", category: "flour", weight: "1kg", icon: "✨", badge: "Master Blend", benefits: ["5 Premium Millets", "Balanced Nutrition", "Versatile Use", "Fresh Ground"], description: "Masterfully crafted blend of 5 premium millets. Perfect for rotis, bread, pancakes, and gourmet baking applications." },
+            { id: 12, name: "Ultra-Fine Ragi Flour", category: "flour", weight: "1kg", icon: "🌿", badge: "Baby Grade", benefits: ["Extra Fine", "Baby Safe", "Calcium Rich", "Easy Digest"], description: "Ultra-fine ragi flour perfect for baby food and smooth porridge. Extra fine grinding ensures easy digestion." },
+            { id: 13, name: "Fresh Stone-Ground Bajra Flour", category: "flour", weight: "1kg", icon: "🌾", badge: "Stone Ground", benefits: ["Traditional Method", "Iron Rich", "Energy Boost", "Fresh Daily"], description: "Traditionally stone-ground bajra flour for authentic taste and maximum nutrition retention." },
+            { id: 14, name: "Premium Jowar Flour", category: "flour", weight: "1kg", icon: "🌿", badge: "Light & Fluffy", benefits: ["Light Texture", "Gluten Free", "Easy Digest", "Economical"], description: "Light textured jowar flour perfect for soft rotis and traditional bhakri. Easy to digest and economical." },
+            { id: 15, name: "Gourmet Pancake Mix", category: "flour", weight: "500g", icon: "🥞", badge: "Instant Gourmet", benefits: ["Just Add Water", "Protein Rich", "Kids Favorite", "Fluffy Pancakes"], description: "Gourmet pancake mix with wholesome millets. Just add water for perfect, fluffy pancakes every time." },
+            { id: 16, name: "Professional Baking Flour", category: "flour", weight: "1kg", icon: "🧁", badge: "Baking Perfection", benefits: ["Perfect Rise", "Cake Grade", "Gluten Free", "Professional"], description: "Professional-grade millet flour blend optimized for baking. Perfect rise and texture for cakes and muffins." },
+            { id: 17, name: "Traditional Sattu Mix", category: "flour", weight: "500g", icon: "💪", badge: "Energy Powerhouse", benefits: ["Instant Energy", "Roasted Goodness", "Traditional Recipe", "Natural Cooling"], description: "Traditional roasted millet mix for instant energy drinks. Natural cooling properties for summer wellness." },
+            { id: 18, name: "Premium Baby Millet Cereal", category: "flour", weight: "400g", icon: "👶", badge: "Pediatric Grade", benefits: ["6+ Months", "Iron Fortified", "Easy Digest", "Allergen Free"], description: "Specially formulated millet cereal for babies 6+ months. Iron fortified and easily digestible." },
+
+            // Ready to Cook
+            { id: 19, name: "Fresh Artisan Idli Batter", category: "ready-to-cook", weight: "500g", icon: "🥣", badge: "Fresh Daily", benefits: ["Traditional Fermentation", "Ready to Steam", "Probiotic Rich", "Authentic Taste"], description: "Freshly fermented artisan idli batter made from premium millet blend. Traditional fermentation for authentic taste." },
+            { id: 20, name: "Golden Crispy Dosa Batter", category: "ready-to-cook", weight: "500g", icon: "🍳", badge: "Restaurant Style", benefits: ["Golden Crispy", "South Indian", "Healthy Twist", "Perfect Texture"], description: "Premium millet dosa batter for golden, crispy dosas. Restaurant-quality texture with healthy millet nutrition." },
+            { id: 21, name: "Instant Gourmet Upma Mix", category: "ready-to-cook", weight: "400g", icon: "🍲", badge: "5 Minute Meal", benefits: ["Quick Breakfast", "Nutritious", "Filling", "Authentic Spices"], description: "Gourmet upma mix for quick, nutritious breakfasts. Ready in just 5 minutes with authentic South Indian spices." },
+            { id: 22, name: "Complete Khichdi Meal Mix", category: "ready-to-cook", weight: "500g", icon: "🍚", badge: "One Pot Wonder", benefits: ["Complete Meal", "Protein + Carbs", "Comfort Food", "Ayurvedic"], description: "Complete meal mix with millets, lentils, and traditional spices. Perfect one-pot comfort food with Ayurvedic benefits." },
+            { id: 23, name: "Artisan Millet Pasta", category: "ready-to-cook", weight: "250g", icon: "🍝", badge: "Italian Fusion", benefits: ["Gluten Free", "High Protein", "Italian Style", "Quick Cook"], description: "Artisan millet pasta for guilt-free Italian meals. High protein, gluten-free alternative to traditional pasta." },
+            { id: 24, name: "Healthy Instant Noodles", category: "ready-to-cook", weight: "200g", icon: "🍜", badge: "No Preservatives", benefits: ["2 Min Cook", "No MSG", "Healthy Snack", "Natural Flavors"], description: "Healthy instant noodles made from millet flour. No MSG or harmful preservatives, just natural goodness." },
+            { id: 25, name: "Traditional Millet Vermicelli", category: "ready-to-cook", weight: "400g", icon: "🍝", badge: "Traditional", benefits: ["Multiple Uses", "Quick Cook", "South Indian", "Versatile"], description: "Traditional vermicelli made from nutritious millets. Perfect for upma, payasam, and various regional dishes." },
+
+            // Snacks
+            { id: 26, name: "Handcrafted Artisan Cookies", category: "snacks", weight: "250g", icon: "🍪", badge: "Hand Made", benefits: ["No Refined Sugar", "Jaggery Sweet", "Kids Favorite", "Crunchy"], description: "Handcrafted artisan cookies made with organic jaggery and premium millet flour. Healthy indulgence for all ages." },
+            { id: 27, name: "Power-Packed Energy Bars", category: "snacks", weight: "6 bars", icon: "🥜", badge: "Fitness Special", benefits: ["Nuts & Seeds", "Natural Energy", "Post Workout", "On-the-go"], description: "Power-packed energy bars with millets, nuts, and natural sweeteners. Perfect for fitness enthusiasts and active lifestyles." },
+            { id: 28, name: "Spiced Roasted Snack Mix", category: "snacks", weight: "300g", icon: "🥨", badge: "Tea Time Perfect", benefits: ["Crunchy Mix", "Healthy Munching", "Traditional Spices", "Evening Snack"], description: "Perfectly spiced roasted millet mix for healthy snacking. Traditional Indian spices for authentic flavors." },
+            { id: 29, name: "Herb-Infused Crackers", category: "snacks", weight: "200g", icon: "🫓", badge: "Gourmet", benefits: ["Light & Crispy", "Herb Seasoning", "No Oil Frying", "Party Snack"], description: "Light and crispy millet crackers infused with aromatic herbs. Perfect for parties and healthy snacking." },
+            { id: 30, name: "Traditional Sweet Laddus", category: "snacks", weight: "300g", icon: "🍬", badge: "Festival Special", benefits: ["Jaggery Sweet", "Festival Ready", "Homemade Style", "Natural"], description: "Traditional sweet laddus made with roasted millets and pure jaggery. Festival-ready homemade taste." },
+            { id: 31, name: "Protein-Rich Power Balls", category: "snacks", weight: "250g", icon: "⚽", badge: "Fitness Power", benefits: ["High Protein", "Dates & Nuts", "Natural Energy", "Pre/Post Workout"], description: "High protein power balls with millets, dates, and mixed nuts. Natural energy for fitness enthusiasts." },
+            { id: 32, name: "Baked Spice Chips", category: "snacks", weight: "150g", icon: "🥔", badge: "Guilt Free", benefits: ["Baked Not Fried", "Spicy Flavor", "Guilt Free", "Crunchy"], description: "Healthy baked millet chips with traditional Indian spices. Guilt-free alternative to fried snacks." },
+
+            // Breakfast Items
+            { id: 33, name: "Premium Breakfast Cereal", category: "breakfast", weight: "400g", icon: "🥣", badge: "Morning Energy", benefits: ["Nuts & Fruits", "Instant Preparation", "Nutritious", "Family Size"], description: "Premium breakfast cereal with millets, nuts, and dried fruits. Complete morning nutrition for the whole family." },
+            { id: 34, name: "Comfort Porridge Mix", category: "breakfast", weight: "500g", icon: "🍯", badge: "Comfort Food", benefits: ["Hot Breakfast", "Filling & Nutritious", "Wholesome", "Winter Special"], description: "Comforting porridge mix perfect for cold mornings. Wholesome nutrition in a warming, filling breakfast." },
+            { id: 35, name: "Luxury Muesli Premium", category: "breakfast", weight: "400g", icon: "🥛", badge: "European Style", benefits: ["Luxury Ingredients", "Fruits & Nuts", "Fiber Rich", "Gourmet"], description: "Luxury muesli with premium millets, exotic fruits, and nuts. European-style breakfast for discerning palates." },
+            { id: 36, name: "Natural Chocolate Cereal", category: "breakfast", weight: "300g", icon: "🍫", badge: "Kids Delight", benefits: ["Natural Cocoa", "Kids Love It", "Calcium Rich", "Healthy Sweet"], description: "Natural chocolate cereal that kids will love. Made with real cocoa and calcium-rich millets." },
+            { id: 37, name: "Honey-Roasted Granola", category: "breakfast", weight: "350g", icon: "🥜", badge: "Artisan Roasted", benefits: ["Honey Roasted", "Crunchy Texture", "Yogurt Perfect", "Gourmet"], description: "Artisan honey-roasted granola with crunchy texture. Perfect topping for yogurt and smoothie bowls." },
+
+            // Traditional Varieties
+            { id: 38, name: "Ancient Heritage Seed Mix", category: "traditional", weight: "500g", icon: "🌰", badge: "5000 Years", benefits: ["Ancient Variety", "Rare Seeds", "Nutritional Powerhouse", "Heritage"], description: "Rare collection of ancient seeds with 5000+ years of heritage. Exceptional nutrition preserved through generations." },
+            { id: 39, name: "Wild Forest Millet", category: "traditional", weight: "500g", icon: "🌿", badge: "Wild Harvest", benefits: ["Forest Grown", "Untouched Variety", "Pure & Natural", "Tribal Heritage"], description: "Wild variety harvested from pristine forest regions. Untouched by modern agriculture for pure nutrition." },
+            { id: 40, name: "Tribal Heritage Mix", category: "traditional", weight: "1kg", icon: "🏔️", badge: "Tribal Wisdom", benefits: ["Tribal Knowledge", "Mountain Grown", "Traditional Recipe", "Cultural Heritage"], description: "Traditional mix used by tribal communities for generations. Mountain-grown with ancient wisdom." },
+            { id: 41, name: "Himalayan Buckwheat", category: "traditional", weight: "500g", icon: "🏔️", badge: "High Altitude", benefits: ["Himalayan Origin", "Rare Variety", "Cold Climate", "Mountain Pure"], description: "Rare buckwheat variety from high-altitude Himalayan regions. Pure mountain air and pristine environment." },
+            { id: 42, name: "Desert Resilience Millet", category: "traditional", weight: "500g", icon: "🏜️", badge: "Climate Hardy", benefits: ["Desert Adapted", "Water Efficient", "Climate Resilient", "Survival Food"], description: "Hardy millet variety adapted to harsh desert conditions. Symbol of resilience and sustainability." },
+
+            // Premium Specialty Products
+            { id: 43, name: "Organic Millet Milk Powder", category: "breakfast", weight: "300g", icon: "🥛", badge: "Plant Based", benefits: ["Dairy Free", "Protein Rich", "Instant Milk", "Lactose Free"], description: "Creamy plant-based milk powder made from premium millets. Perfect dairy alternative with rich nutrition." },
+            { id: 44, name: "Probiotic Fermented Flour", category: "flour", weight: "500g", icon: "🦠", badge: "Gut Health", benefits: ["Probiotics", "Digestive Health", "Fermented", "Gut Friendly"], description: "Naturally fermented millet flour with beneficial probiotics. Excellent for digestive health and gut wellness." },
+            { id: 45, name: "Sprouted Superfood Mix", category: "whole-grains", weight: "500g", icon: "🌱", badge: "Activated", benefits: ["Enhanced Nutrition", "Easy Absorption", "Activated Enzymes", "Superfood"], description: "Carefully sprouted millets for enhanced nutritional absorption. Activated enzymes for maximum bioavailability." },
+            { id: 46, name: "Plant Protein Powder", category: "snacks", weight: "400g", icon: "💪", badge: "Fitness Elite", benefits: ["25g Protein", "Plant Based", "Muscle Building", "Performance"], description: "High-quality plant protein powder for serious fitness enthusiasts. 25g protein per serving for muscle building." },
+            { id: 47, name: "Golden Millet Honey", category: "snacks", weight: "250g", icon: "🍯", badge: "Liquid Gold", benefits: ["Raw Honey", "Millet Infused", "Antioxidants", "Natural Sweet"], description: "Pure raw honey infused with millet extracts. Liquid gold with added nutrition and antioxidant properties." },
+            { id: 48, name: "Natural Beauty Face Pack", category: "traditional", weight: "100g", icon: "🧴", badge: "Beauty Care", benefits: ["Natural Scrub", "Skin Care", "Chemical Free", "Ayurvedic"], description: "Natural face pack made from finely ground millets. Chemical-free skincare with Ayurvedic benefits." },
+            { id: 49, name: "Baby Teething Rusk", category: "snacks", weight: "150g", icon: "👶", badge: "Baby Safe", benefits: ["Teething Relief", "Iron Rich", "No Added Sugar", "Safe Texture"], description: "Healthy teething rusk for babies made with iron-rich millets. Safe texture and no added sugar." },
+            { id: 50, name: "Concentrated Nutrition Capsules", category: "traditional", weight: "60 caps", icon: "💊", badge: "Nutraceutical", benefits: ["Daily Nutrition", "Concentrated", "Convenient", "Health Supplement"], description: "Concentrated millet nutrition in convenient capsule form. Daily health supplement for busy lifestyles." }
+        ];
+
+        // Get current price for a product
+        function getCurrentPrice(productId) {
+            return priceConfig[productId] || 0;
+        }
+
+        // Update product prices
+        function updateProductPrices() {
+            products.forEach(product => {
+                product.price = getCurrentPrice(product.id);
+            });
+            renderProducts();
+        }
+
+        // Price management functions
+        function updatePricesFromFile() {
+            // Simulate different price scenarios
+            const scenarios = ['summer_sale', 'premium_pricing', 'festival_special'];
+            const randomScenario = scenarios[Math.floor(Math.random() * scenarios.length)];
+            
+            // Load price configuration
+            priceConfig = { ...priceConfigurations[randomScenario] };
+            
+            // Update products and re-render
+            updateProductPrices();
+            
+            // Show notification
+            showPriceNotification(`Prices updated from ${randomScenario}.txt`);
+            
+            console.log(`Prices updated from: ${randomScenario}.txt`);
+        }
+
+        function resetPrices() {
+            // Reset to original prices
+            priceConfig = {
+                1: 145, 2: 165, 3: 185, 4: 195, 5: 175, 6: 180, 7: 170, 8: 220, 9: 135, 10: 280,
+                11: 195, 12: 155, 13: 140, 14: 130, 15: 225, 16: 245, 17: 185, 18: 265, 19: 95, 20: 95,
+                21: 165, 22: 175, 23: 185, 24: 165, 25: 155, 26: 225, 27: 285, 28: 195, 29: 165, 30: 245,
+                31: 295, 32: 175, 33: 245, 34: 215, 35: 325, 36: 275, 37: 295, 38: 385, 39: 420, 40: 350,
+                41: 295, 42: 275, 43: 445, 44: 205, 45: 235, 46: 485, 47: 365, 48: 185, 49: 145, 50: 525
+            };
+            
+            updateProductPrices();
+            showPriceNotification('Prices reset to default values');
+        }
+
+        function showPriceEditor() {
+            const productId = prompt('Enter Product ID (1-50):');
+            if (productId && productId >= 1 && productId <= 50) {
+                const currentPrice = getCurrentPrice(parseInt(productId));
+                const newPrice = prompt(`Current price for Product ${productId}: ₹${currentPrice}\nEnter new price:`);
+                if (newPrice && !isNaN(newPrice)) {
+                    priceConfig[parseInt(productId)] = parseFloat(newPrice);
+                    updateProductPrices();
+                    showPriceNotification(`Product ${productId} price updated to ₹${newPrice}`);
+                }
+            }
+        }
+
+        function togglePricePanel() {
+            const panel = document.getElementById('pricePanel');
+            panel.classList.toggle('open');
+        }
+
+        function closePricePanel() {
+            const panel = document.getElementById('pricePanel');
+            panel.classList.remove('open');
+        }
+
+        function showPriceNotification(message = 'Prices updated successfully!') {
+            const notification = document.getElementById('priceNotification');
+            const messageEl = notification.querySelector('.notification-message');
+            messageEl.textContent = message;
+            notification.classList.add('show');
+        }
+
+        function hidePriceNotification() {
+            const notification = document.getElementById('priceNotification');
+            notification.classList.remove('show');
+        }
+
+        // ============ EXISTING FUNCTIONALITY ============
+        let currentSlideIndex = 0;
+        let filteredProducts = [...products];
+        let cartItems = [];
+        let displayedProducts = 12;
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProductPrices(); // Set initial prices
+            renderProducts();
+            initializeCarousel();
+            initializeFilters();
+            initializeSearch();
+            initializeScrollEffects();
+        });
+
+        // Scroll effects
+        function initializeScrollEffects() {
+            const header = document.getElementById('header');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Carousel functionality
+        function initializeCarousel() {
+            setInterval(nextSlide, 6000);
+        }
+
+        function currentSlide(n) {
+            showSlide(currentSlideIndex = n - 1);
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            showSlide(currentSlideIndex = (currentSlideIndex + 1) % slides.length);
+        }
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            
+            if (n >= slides.length) currentSlideIndex = 0;
+            if (n < 0) currentSlideIndex = slides.length - 1;
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        // Product rendering
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            
+            const productsToShow = filteredProducts.slice(0, displayedProducts);
+            
+            productsToShow.forEach((product, index) => {
+                const productCard = createProductCard(product);
+                productCard.style.animationDelay = `${index * 0.05}s`;
+                grid.appendChild(productCard);
+            });
+
+            document.getElementById('resultCount').textContent = filteredProducts.length;
+            
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            if (displayedProducts >= filteredProducts.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+                loadMoreBtn.textContent = `Discover More (${filteredProducts.length - displayedProducts} remaining)`;
+            }
+
+            // Trigger intersection observer
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach(el => {
+                    if (el.getBoundingClientRect().top < window.innerHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }, 100);
+        }
+
+        function createProductCard(product) {
+            const card = document.createElement('div');
+            card.className = 'product-card fade-in';
+            card.setAttribute('data-category', product.category);
+            card.setAttribute('data-price', product.price);
+            card.setAttribute('data-name', product.name);
+            
+            card.innerHTML = `
+                <div class="product-badge">${product.badge}</div>
+                <div class="product-image">${product.icon}</div>
+                <div class="product-info">
+                    <div class="product-category">${getCategoryName(product.category)}</div>
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="product-benefits">
+                        ${product.benefits.map(benefit => `<span class="benefit-tag">${benefit}</span>`).join('')}
+                    </div>
+                    <div class="product-details">
+                        <span class="product-price">₹${product.price}</span>
+                        <span class="product-weight">${product.weight}</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="quick-view-btn" onclick="quickView(${product.id})">Quick View</button>
+                        <button class="add-to-cart" onclick="addToCart(${product.id})">Add to Cart</button>
+                    </div>
+                </div>
+            `;
+            
+            return card;
+        }
+
+        function getCategoryName(category) {
+            const categories = {
+                'whole-grains': 'Whole Grains',
+                'flour': 'Flour & Blends',
+                'ready-to-cook': 'Ready to Cook',
+                'snacks': 'Artisan Snacks',
+                'breakfast': 'Breakfast Essentials',
+                'traditional': 'Heritage Varieties'
+            };
+            return categories[category] || 'Premium Products';
+        }
+
+        // Filter functionality
+        function initializeFilters() {
+            const categoryButtons = document.querySelectorAll('.filter-button[data-filter]');
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    applyFilters(filterValue);
+                });
+            });
+
+            const priceButtons = document.querySelectorAll('.filter-button[data-price]');
+            priceButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    priceButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const priceRange = this.getAttribute('data-price');
+                    applyPriceFilter(priceRange);
+                });
+            });
+
+            const sortSelect = document.getElementById('sortSelect');
+            sortSelect.addEventListener('change', function() {
+                sortProducts(this.value);
+            });
+        }
+
+        function applyFilters(category) {
+            if (category === 'all') {
+                filteredProducts = [...products];
+            } else {
+                filteredProducts = products.filter(product => product.category === category);
+            }
+            displayedProducts = 12;
+            renderProducts();
+        }
+
+        function applyPriceFilter(priceRange) {
+            let minPrice = 0, maxPrice = Infinity;
+            
+            switch(priceRange) {
+                case 'under-100':
+                    maxPrice = 100;
+                    break;
+                case '100-200':
+                    minPrice = 100;
+                    maxPrice = 200;
+                    break;
+                case '200-300':
+                    minPrice = 200;
+                    maxPrice = 300;
+                    break;
+                case 'above-300':
+                    minPrice = 300;
+                    break;
+            }
+            
+            filteredProducts = filteredProducts.filter(product => 
+                product.price >= minPrice && product.price <= maxPrice
+            );
+            displayedProducts = 12;
+            renderProducts();
+        }
+
+        function sortProducts(sortBy) {
+            switch(sortBy) {
+                case 'price-low':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'name':
+                    filteredProducts.sort((a, b) => a.name.localeCompare(b.name));
+                    break;
+                case 'newest':
+                    filteredProducts.sort((a, b) => b.id - a.id);
+                    break;
+                default:
+                    filteredProducts = products.filter(product => 
+                        filteredProducts.some(fp => fp.id === product.id)
+                    );
+            }
+            renderProducts();
+        }
+
+        // Search functionality
+        function initializeSearch() {
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                if (searchTerm === '') {
+                    filteredProducts = [...products];
+                } else {
+                    filteredProducts = products.filter(product =>
+                        product.name.toLowerCase().includes(searchTerm) ||
+                        product.description.toLowerCase().includes(searchTerm) ||
+                        product.benefits.some(benefit => benefit.toLowerCase().includes(searchTerm))
+                    );
+                }
+                displayedProducts = 12;
+                renderProducts();
+            });
+        }
+
+        function loadMoreProducts() {
+            displayedProducts += 12;
+            renderProducts();
+        }
+
+        // Cart functionality
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cartItems.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cartItems.push({ ...product, quantity: 1 });
+            }
+            
+            updateCartCount();
+            
+            // Enhanced visual feedback
+            const button = event.target;
+            const originalText = button.textContent;
+            const originalBg = button.style.background;
+            
+            button.textContent = 'Added! ✨';
+            button.style.background = 'var(--gradient-premium)';
+            button.style.transform = 'scale(0.95)';
+            
+            setTimeout(() => {
+                button.textContent = originalText;
+                button.style.background = originalBg;
+                button.style.transform = 'scale(1)';
+            }, 1500);
+        }
+
+        function updateCartCount() {
+            const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cartCount').textContent = totalItems;
+        }
+
+        function showCart() {
+            if (cartItems.length === 0) {
+                alert('🛒 Your premium cart is empty!\n\nDiscover our exquisite collection of organic millets and start your wellness journey today.');
+                return;
+            }
+            
+            let cartSummary = '🛒 Your Premium Selection:\n\n';
+            let total = 0;
+            
+            cartItems.forEach(item => {
+                cartSummary += `${item.name}\n${item.quantity}x ₹${item.price} = ₹${item.price * item.quantity}\n\n`;
+                total += item.price * item.quantity;
+            });
+            
+            cartSummary += `💰 Total: ₹${total}`;
+            cartSummary += `\n🚚 ${total >= 500 ? 'Free Delivery!' : 'Add ₹' + (500 - total) + ' for free delivery'}`;
+            cartSummary += '\n\n✨ Proceed to secure checkout?';
+            
+            if (confirm(cartSummary)) {
+                alert('🙏 Thank you for choosing Murthys Millet Magic!\n\nYour premium order has been received. Our concierge team will contact you within 15 minutes to confirm delivery details.\n\n📞 For immediate assistance: +91 9876-543-210');
+                cartItems = [];
+                updateCartCount();
+            }
+        }
+
+        function quickView(productId) {
+            const product = products.find(p => p.id === productId);
+            alert(`✨ ${product.name}\n\n💰 Price: ₹${product.price}/${product.weight}\n📦 Category: ${getCategoryName(product.category)}\n🏷️ Badge: ${product.badge}\n\n📝 ${product.description}\n\n🌟 Benefits: ${product.benefits.join(' • ')}`);
+        }
+
+        function openChat() {
+            alert('💬 Welcome to Murthys Millet Magic Premium Store!\n\nOur dedicated customer care team is here to assist you:\n\n🤖 AI Assistant: Instant product guidance\n📞 Premium Hotline: +91 9876-543-210\n📧 Email: premium@murthysmillet.com\n💬 WhatsApp: Quick responses\n\n✨ How can we help you discover the perfect millet products for your wellness journey?');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Auto-observe new elements
+        function observeNewElements() {
+            document.querySelectorAll('.fade-in:not(.observed)').forEach(el => {
+                el.classList.add('observed');
+                observer.observe(el);
+            });
+        }
+
+        // Call observer after each render
+        setInterval(observeNewElements, 1000);
+    </script>
+</body>
+</html>
